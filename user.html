@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Rooming List</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous" />
+    <link href="https://unpkg.com/tabulator-tables@4.1.4/dist/css/tabulator.min.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="w-75 mx-auto mt-5">
+      <div id="userAccess-table"></div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <script type="text/javascript" src="https://unpkg.com/tabulator-tables@4.1.4/dist/js/tabulator.min.js"></script>
+    <script src="./js/routes.js"></script>
+    <script src="./js/main.js"></script>
+
+    <script>
+      const token = localStorage.getItem("token");
+      let data = null;
+
+      const createTable = () => {
+        let formattedData = null;
+        if (data.length > 0) {
+          var dataLocal = data?.map((item, index) => {
+            return {
+              username: item.i,
+              tripId: item.t,
+              groupId: item.g,
+            };
+          });
+          formattedData = dataLocal;
+
+          // create table from formatted data in id access-table
+          const table = new Tabulator("#userAccess-table", {
+            data: formattedData,
+            layout: "fitColumns",
+            rowFormatter: function (row) {
+              // Set the desired row height
+              row.getElement().style.height = "50px";
+
+              // Adjust the cell height within the row
+              row.getCells().forEach(function (cell) {
+                cell.getElement().style.height = "100%";
+              });
+            },
+            pagination: "local",
+            paginationSize: 10,
+            paginationSizeSelector: [5, 10, 20, 50],
+            columns: [
+              {
+                title: "Username",
+                field: "username",
+              },
+              {
+                title: "Trip Id",
+                field: "tripId",
+                formatter: "link",
+                formatterParams: {
+                  url: function (cell) {
+                    return "/trip.html?tripId=" + encodeURIComponent(cell.getValue());
+                  },
+                  target: "_blank",
+                },
+              },
+              {
+                title: "Group Id",
+                field: "groupId",
+              },
+            ],
+          });
+        }
+      };
+      const getData = async () => {
+        await axios
+          .get(`${API_URL}/user/access`, {
+            headers: {
+              Authorization: `Bearer ${token}`,
+            },
+          })
+          .then((response) => {
+            const responseDataLocal = response?.data?.responseData;
+            let dataLocal = [];
+            responseDataLocal.forEach((item) => {
+              const t = item.tripId;
+              const i = item.username;
+              const groupIds = item.groupId;
+              groupIds.forEach((g) => {
+                dataLocal.push({ i, t, g });
+              });
+            });
+            data = dataLocal;
+
+            createTable();
+          })
+          .catch((error) => {
+            console.log(error);
+          });
+      };
+
+      getData();
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+  </body>
+</html>

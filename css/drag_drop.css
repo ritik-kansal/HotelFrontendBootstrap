@@ -1,0 +1,53 @@
+.container .drop-targets {
+  display: flex;
+}
+
+.hide {
+  display: none;
+}
+
+.item {
+  height: 200px;
+  width: 200px;
+  background-color: #ccc;
+}
+
+.box_container {
+  margin-right: 20px;
+}
+
+.box {
+  border: 2px solid #ccc;
+  height: 250px;
+  width: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0 0 5px 5px;
+}
+
+.box.drag-over {
+  border: 2px dotted red;
+}
+.box_name {
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  border-radius: 5px 5px 0 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 10px;
+}
+
+.bg-red {
+  background-color: red;
+}
+
+.bg-green {
+  background-color: green;
+}
+
+.bg-yellow {
+  background-color: yellow;
+}

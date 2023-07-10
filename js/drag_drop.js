@@ -44,6 +44,7 @@ const items = document.querySelectorAll(".item");
 
 items.forEach((item) => {
   item.addEventListener("dragstart", dragStart);
+  item.addEventListener("dragend", dragEnd);
 });
 
 function dragStart(e) {
@@ -51,6 +52,10 @@ function dragStart(e) {
   setTimeout(() => {
     e.target.classList.add("hide");
   }, 0);
+}
+
+function dragEnd(e) {
+  e.target.classList.remove("hide");
 }
 
 const boxes = document.querySelectorAll(".box");

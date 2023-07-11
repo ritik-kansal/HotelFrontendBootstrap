@@ -1,0 +1,2855 @@
+{
+    "responseData": {
+        "createdDate": "2023-06-04T00:18:54.350786",
+        "isLocked": true,
+        "roomData": [
+            {
+                "arrivalDate": "07-JUN-22",
+                "boards": [
+                    {
+                        "accept": 3,
+                        "capacity": 1,
+                        "color": "danger",
+                        "guests": [
+                            {
+                                "AGE": "79",
+                                "BIRTH_DT": "05-Aug-42",
+                                "GENDER": "F",
+                                "GROUP_ID": "111869",
+                                "NAME": "Robbie Boyd",
+                                "PASSPORT_COUNTRY_OF_ISSUE": "US",
+                                "PASSPORT_NUMBER": "565089450",
+                                "PAXTYPE": "P",
+                                "PAX_ID": "23218",
+                                "PRODUCT_LINE": "H",
+                                "ROOM_ASSIGNMENT": "Unassigned",
+                                "ROOM_TEXT": "",
+                                "ROOM_TYPE": "1",
+                                "SALES_TEAM": "ROM"
+                            }
+                        ],
+                        "state": 0,
+                        "title": "Room 1-Single"
+                    },
+                    {
+                        "accept": 3,
+                        "capacity": 2,
+                        "color": "primary",
+                        "guests": [
+                            {
+                                "AGE": "39",
+                                "BIRTH_DT": "03-Dec-82",
+                                "GENDER": "F",
+                                "GROUP_ID": "111869",
+                                "NAME": "Anna Garner",
+                                "PASSPORT_COUNTRY_OF_ISSUE": "US",
+                                "PASSPORT_NUMBER": "A05384600",
+                                "PAXTYPE": "H",
+                                "PAX_ID": "2365",
+                                "PRODUCT_LINE": "H",
+                                "ROOM_ASSIGNMENT": "7",
+                                "ROOM_TEXT": "twin w/Stephanie Allen",
+                                "ROOM_TYPE": "2",
+                                "SALES_TEAM": "ROM"
+                            },
+                            {
+                                "AGE": "39",
+                                "BIRTH_DT": "26-Feb-83",
+                                "GENDER": "F",
+                                "GROUP_ID": "111869",
+                                "NAME": "Stephanie Allen",
+                                "PASSPORT_COUNTRY_OF_ISSUE": "",
+                                "PASSPORT_NUMBER": "",
+                                "PAXTYPE": "A",
+                                "PAX_ID": "11088",
+                                "PRODUCT_LINE": "H",
+                                "ROOM_ASSIGNMENT": "7",
+                                "ROOM_TEXT": "",
+                                "ROOM_TYPE": "2",
+                                "SALES_TEAM": "ROM"
+                            }
+                        ],
+                        "state": 1,
+                        "title": "Room 2-Double"
+                    },
+                    {
+                        "accept": 3,
+                        "capacity": 2,
+                        "color": "primary",
+                        "guests": [
+                            {
+                                "AGE": "65",
+                                "BIRTH_DT": "14-Aug-56",
+                                "GENDER": "F",
+                                "GROUP_ID": "111869",
+                                "NAME": "Barbara Jones",
+                                "PASSPORT_COUNTRY_OF_ISSUE": "US",
+                                "PASSPORT_NUMBER": "A02205849",
+                                "PAXTYPE": "P",
+                                "PAX_ID": "3006",
+                                "PRODUCT_LINE": "H",
+                                "ROOM_ASSIGNMENT": "5",
+                                "ROOM_TEXT": "Twin with ElizabethTidwell.",
+                                "ROOM_TYPE": "2",
+                                "SALES_TEAM": "ROM"
+                            },
+                            {
+                                "AGE": "60",
+                                "BIRTH_DT": "14-Feb-62",
+                                "GENDER": "F",
+                                "GROUP_ID": "111869",
+                                "NAME": "Mary Tidwell",
+                                "PASSPORT_COUNTRY_OF_ISSUE": "US",
+                                "PASSPORT_NUMBER": "512156447",
+                                "PAXTYPE": "P",
+                                "PAX_ID": "3038",
+                                "PRODUCT_LINE": "H",
+                                "ROOM_ASSIGNMENT": "5",
+                                "ROOM_TEXT": "Twin with BarbaraJones.",
+                                "ROOM_TYPE": "2",
+                                "SALES_TEAM": "ROM"
+                            }
+                        ],
+                        "state": 2,
+                        "title": "Room 3-Double"
+                    },
+                    {
+                        "accept": 3,
+                        "capacity": 2,
+                        "color": "primary",
+                        "guests": [
+                            {
+                                "AGE": "59",
+                                "BIRTH_DT": "03-Oct-62",
+                                "GENDER": "F",
+                                "GROUP_ID": "111869",
+                                "NAME": "Margaret Rowland",
+                                "PASSPORT_COUNTRY_OF_ISSUE": "US",
+                                "PASSPORT_NUMBER": "665099128",
+                                "PAXTYPE": "P",
+                                "PAX_ID": "8768",
+                                "PRODUCT_LINE": "H",
+                                "ROOM_ASSIGNMENT": "4",
+                                "ROOM_TEXT": "Twin with NinabethCapaning.",
+                                "ROOM_TYPE": "2",
+                                "SALES_TEAM": "ROM"
+                            },
+                            {
+                                "AGE": "58",
+                                "BIRTH_DT": "01-Sep-63",
+                                "GENDER": "F",
+                                "GROUP_ID": "111869",
+                                "NAME": "Ninabeth Capaning",
+                                "PASSPORT_COUNTRY_OF_ISSUE": "US",
+                                "PASSPORT_NUMBER": "652683667",
+                                "PAXTYPE": "P",
+                                "PAX_ID": "9877",
+                                "PRODUCT_LINE": "H",
+                                "ROOM_ASSIGNMENT": "4",
+                                "ROOM_TEXT": "Twin with MargaretRowland.",
+                                "ROOM_TYPE": "2",
+                                "SALES_TEAM": "ROM"
+                            }
+                        ],
+                        "state": 3,
+                        "title": "Room 4-Double"
+                    },
+                    {
+                        "accept": 3,
+                        "capacity": 2,
+                        "color": "primary",
+                        "guests": [
+                            {
+                                "AGE": "46",
+                                "BIRTH_DT": "04-May-76",
+                                "GENDER": "F",
+                                "GROUP_ID": "111869",
+                                "NAME": "Jennifer Mulrooney",
+                                "PASSPORT_COUNTRY_OF_ISSUE": "US",
+                                "PASSPORT_NUMBER": "548142003",
+                                "PAXTYPE": "P",
+                                "PAX_ID": "3168",
+                                "PRODUCT_LINE": "H",
+                                "ROOM_ASSIGNMENT": "3",
+                                "ROOM_TEXT": "Twin with RileyMulrooney.",
+                                "ROOM_TYPE": "2",
+                                "SALES_TEAM": "ROM"
+                            },
+                            {
+                                "AGE": "67",
+                                "BIRTH_DT": "24-Jan-55",
+                                "GENDER": "F",
+                                "GROUP_ID": "111869",
+                                "NAME": "Debra Scott",
+                                "PASSPORT_COUNTRY_OF_ISSUE": "US",
+                                "PASSPORT_NUMBER": "665165268",
+                                "PAXTYPE": "P",
+                                "PAX_ID": "2363",
+                                "PRODUCT_LINE": "H",
+                                "ROOM_ASSIGNMENT": "2",
+                                "ROOM_TEXT": "Spouse is JerryScott.",
+                                "ROOM_TYPE": "2",
+                                "SALES_TEAM": "ROM"
+                            }
+                        ],
+                        "state": 4,
+                        "title": "Room 5-Double"
+                    },
+                    {
+                        "accept": 1,
+                        "capacity": 2,
+                        "color": "primary",
+                        "guests": [
+                            {
+                                "AGE": "31",
+                                "BIRTH_DT": "25-Feb-91",
+                                "GENDER": "M",
+                                "GROUP_ID": "111869",
+                                "NAME": "Adam Guntharp",
+                                "PASSPORT_COUNTRY_OF_ISSUE": "US",
+                                "PASSPORT_NUMBER": "520351985",
+                                "PAXTYPE": "P",
+                                "PAX_ID": "2636",
+                                "PRODUCT_LINE": "H",
+                                "ROOM_ASSIGNMENT": "Unassigned",
+                                "ROOM_TEXT": "",
+                                "ROOM_TYPE": "2",
+                                "SALES_TEAM": "ROM"
+                            },
+                            {
+                                "AGE": "64",
+                                "BIRTH_DT": "15-Nov-57",
+                                "GENDER": "M",
+                                "GROUP_ID": "111869",
+                                "NAME": "Jerry Scott",
+                                "PASSPORT_COUNTRY_OF_ISSUE": "US",
+                                "PASSPORT_NUMBER": "665165267",
+                                "PAXTYPE": "P",
+                                "PAX_ID": "2362",
+                                "PRODUCT_LINE": "H",
+                                "ROOM_ASSIGNMENT": "2",
+                                "ROOM_TEXT": "Spouse is DebraScott.",
+                                "ROOM_TYPE": "2",
+                                "SALES_TEAM": "ROM"
+                            }
+                        ],
+                        "state": 5,
+                        "title": "Room 6-Double"
+                    },
+                    {
+                        "accept": 4,
+                        "capacity": 2,
+                        "color": "primary",
+                        "guests": [
+                            {
+                                "AGE": "17",
+                                "BIRTH_DT": "28-Jan-05",
+                                "GENDER": "F",
+                                "GROUP_ID": "111869",
+                                "NAME": "Riley Mulrooney",
+                                "PASSPORT_COUNTRY_OF_ISSUE": "US",
+                                "PASSPORT_NUMBER": "A02083841",
+                                "PAXTYPE": "P",
+                                "PAX_ID": "2629",
+                                "PRODUCT_LINE": "H",
+                                "ROOM_ASSIGNMENT": "3",
+                                "ROOM_TEXT": "Twin with JenniferMulrooney.",
+                                "ROOM_TYPE": "2",
+                                "SALES_TEAM": "ROM"
+                            }
+                        ],
+                        "state": 6,
+                        "title": "Room 7-Double"
+                    },
+                    {
+                        "accept": 3,
+                        "capacity": 2,
+                        "color": "primary",
+                        "guests": [
+                            {
+                                "AGE": "57",
+                                "BIRTH_DT": "06-Jul-64",
+                                "GENDER": "F",
+                                "GROUP_ID": "111869",
+                                "NAME": "Melissa Lindsey",
+                                "PASSPORT_COUNTRY_OF_ISSUE": "US",
+                                "PASSPORT_NUMBER": "673041851",
+                                "PAXTYPE": "P",
+                                "PAX_ID": "2635",
+                                "PRODUCT_LINE": "H",
+                                "ROOM_ASSIGNMENT": "1",
+                                "ROOM_TEXT": "Spouse is David KeithLindsey.",
+                                "ROOM_TYPE": "2",
+                                "SALES_TEAM": "ROM"
+                            }
+                        ],
+                        "state": 7,
+                        "title": "Room 8-Double"
+                    },
+                    {
+                        "accept": 1,
+                        "capacity": 2,
+                        "color": "primary",
+                        "guests": [
+                            {
+                                "AGE": "64",
+                                "BIRTH_DT": "24-Nov-57",
+                                "GENDER": "M",
+                                "GROUP_ID": "111869",
+                                "NAME": "David Lindsey",
+                                "PASSPORT_COUNTRY_OF_ISSUE": "US",
+                                "PASSPORT_NUMBER": "A01686924",
+                                "PAXTYPE": "A",
+                                "PAX_ID": "2760",
+                                "PRODUCT_LINE": "H",
+                                "ROOM_ASSIGNMENT": "1",
+                                "ROOM_TEXT": "Spouse is MelissaLindsey.",
+                                "ROOM_TYPE": "2",
+                                "SALES_TEAM": "ROM"
+                            }
+                        ],
+                        "state": 8,
+                        "title": "Room 9-Double"
+                    },
+                    {
+                        "accept": 3,
+                        "capacity": 3,
+                        "color": "warning",
+                        "guests": [
+                            {
+                                "AGE": "18",
+                                "BIRTH_DT": "24-Jul-03",
+                                "GENDER": "F",
+                                "GROUP_ID": "111869",
+                                "NAME": "Avery Tate",
+                                "PASSPORT_COUNTRY_OF_ISSUE": "US",
+                                "PASSPORT_NUMBER": "660798318",
+                                "PAXTYPE": "P",
+                                "PAX_ID": "2132",
+                                "PRODUCT_LINE": "H",
+                                "ROOM_ASSIGNMENT": "Unassigned",
+                                "ROOM_TEXT": "",
+                                "ROOM_TYPE": "3",
+                                "SALES_TEAM": "ROM"
+                            },
+                            {
+                                "AGE": "18",
+                                "BIRTH_DT": "04-May-04",
+                                "GENDER": "F",
+                                "GROUP_ID": "111869",
+                                "NAME": "Aubrey Leake",
+                                "PASSPORT_COUNTRY_OF_ISSUE": "US",
+                                "PASSPORT_NUMBER": "677565532",
+                                "PAXTYPE": "P",
+                                "PAX_ID": "14983",
+                                "PRODUCT_LINE": "H",
+                                "ROOM_ASSIGNMENT": "Unassigned",
+                                "ROOM_TEXT": "",
+                                "ROOM_TYPE": "3",
+                                "SALES_TEAM": "ROM"
+                            },
+                            {
+                                "AGE": "18",
+                                "BIRTH_DT": "20-Apr-04",
+                                "GENDER": "F",
+                                "GROUP_ID": "111869",
+                                "NAME": "Eron Hendrix",
+                                "PASSPORT_COUNTRY_OF_ISSUE": "US",
+                                "PASSPORT_NUMBER": "576047392",
+                                "PAXTYPE": "P",
+                                "PAX_ID": "17318",
+                                "PRODUCT_LINE": "H",
+                                "ROOM_ASSIGNMENT": "Unassigned",
+                                "ROOM_TEXT": "",
+                                "ROOM_TYPE": "3",
+                                "SALES_TEAM": "ROM"
+                            }
+                        ],
+                        "state": 9,
+                        "title": "Room 10-Triple"
+                    },
+                    {
+                        "accept": 3,
+                        "capacity": 3,
+                        "color": "warning",
+                        "guests": [
+                            {
+                                "AGE": "18",
+                                "BIRTH_DT": "06-Aug-03",
+                                "GENDER": "F",
+                                "GROUP_ID": "111869",
+                                "NAME": "Molly Billingsley",
+                                "PASSPORT_COUNTRY_OF_ISSUE": "US",
+                                "PASSPORT_NUMBER": "582834907",
+                                "PAXTYPE": "P",
+                                "PAX_ID": "2127",
+                                "PRODUCT_LINE": "H",
+                                "ROOM_ASSIGNMENT": "Unassigned",
+                                "ROOM_TEXT": "",
+                                "ROOM_TYPE": "3",
+                                "SALES_TEAM": "ROM"
+                            },
+                            {
+                                "AGE": "18",
+                                "BIRTH_DT": "22-Oct-03",
+                                "GENDER": "F",
+                                "GROUP_ID": "111869",
+                                "NAME": "Gabryale Adams",
+                                "PASSPORT_COUNTRY_OF_ISSUE": "US",
+                                "PASSPORT_NUMBER": "657006045",
+                                "PAXTYPE": "P",
+                                "PAX_ID": "2126",
+                                "PRODUCT_LINE": "H",
+                                "ROOM_ASSIGNMENT": "Unassigned",
+                                "ROOM_TEXT": "",
+                                "ROOM_TYPE": "3",
+                                "SALES_TEAM": "ROM"
+                            },
+                            {
+                                "AGE": "59",
+                                "BIRTH_DT": "07-Feb-63",
+                                "GENDER": "F",
+                                "GROUP_ID": "111869",
+                                "NAME": "Lisa Richardson",
+                                "PASSPORT_COUNTRY_OF_ISSUE": "US",
+                                "PASSPORT_NUMBER": "595576238",
+                                "PAXTYPE": "P",
+                                "PAX_ID": "2130",
+                                "PRODUCT_LINE": "H",
+                                "ROOM_ASSIGNMENT": "6",
+                                "ROOM_TEXT": "",
+                                "ROOM_TYPE": "3",
+                                "SALES_TEAM": "ROM"
+                            }
+                        ],
+                        "state": 10,
+                        "title": "Room 11-Triple"
+                    },
+                    {
+                        "accept": 3,
+                        "capacity": 3,
+                        "color": "warning",
+                        "guests": [
+                            {
+                                "AGE": "59",
+                                "BIRTH_DT": "24-Sep-62",
+                                "GENDER": "F",
+                                "GROUP_ID": "111869",
+                                "NAME": "Sheila Morton",
+                                "PASSPORT_COUNTRY_OF_ISSUE": "US",
+                                "PASSPORT_NUMBER": "667524263",
+                                "PAXTYPE": "P",
+                                "PAX_ID": "11006",
+                                "PRODUCT_LINE": "H",
+                                "ROOM_ASSIGNMENT": "6",
+                                "ROOM_TEXT": "tpl w/Lisa Richardson & Katie Schaefer",
+                                "ROOM_TYPE": "3",
+                                "SALES_TEAM": "ROM"
+                            },
+                            {
+                                "AGE": "41",
+                                "BIRTH_DT": "18-Apr-81",
+                                "GENDER": "F",
+                                "GROUP_ID": "111869",
+                                "NAME": "Katie Schaefer",
+                                "PASSPORT_COUNTRY_OF_ISSUE": "US",
+                                "PASSPORT_NUMBER": "659828167",
+                                "PAXTYPE": "P",
+                                "PAX_ID": "2131",
+                                "PRODUCT_LINE": "H",
+                                "ROOM_ASSIGNMENT": "6",
+                                "ROOM_TEXT": "",
+                                "ROOM_TYPE": "3",
+                                "SALES_TEAM": "ROM"
+                            }
+                        ],
+                        "state": 11,
+                        "title": "Room 12-Triple"
+                    },
+                    {
+                        "capacity": 10000,
+                        "color": "danger",
+                        "guests": [],
+                        "state": -1,
+                        "title": "Room Temporary"
+                    }
+                ],
+                "cards": [
+                    {
+                        "AGE": "79",
+                        "GENDER": "F",
+                        "NAME": "Robbie Boyd",
+                        "ROOM_TEXT": "",
+                        "ROOM_TYPE": "1",
+                        "id": 1,
+                        "state": 0,
+                        "type": 3
+                    },
+                    {
+                        "AGE": "39",
+                        "GENDER": "F",
+                        "NAME": "Anna Garner",
+                        "ROOM_TEXT": "twin w/Stephanie Allen",
+                        "ROOM_TYPE": "2",
+                        "id": 2,
+                        "state": 1,
+                        "type": 3
+                    },
+                    {
+                        "AGE": "39",
+                        "GENDER": "F",
+                        "NAME": "Stephanie Allen",
+                        "ROOM_TEXT": "",
+                        "ROOM_TYPE": "2",
+                        "id": 3,
+                        "state": 1,
+                        "type": 3
+                    },
+                    {
+                        "AGE": "65",
+                        "GENDER": "F",
+                        "NAME": "Barbara Jones",
+                        "ROOM_TEXT": "Twin with ElizabethTidwell.",
+                        "ROOM_TYPE": "2",
+                        "id": 4,
+                        "state": 2,
+                        "type": 3
+                    },
+                    {
+                        "AGE": "60",
+                        "GENDER": "F",
+                        "NAME": "Mary Tidwell",
+                        "ROOM_TEXT": "Twin with BarbaraJones.",
+                        "ROOM_TYPE": "2",
+                        "id": 5,
+                        "state": 2,
+                        "type": 3
+                    },
+                    {
+                        "AGE": "59",
+                        "GENDER": "F",
+                        "NAME": "Margaret Rowland",
+                        "ROOM_TEXT": "Twin with NinabethCapaning.",
+                        "ROOM_TYPE": "2",
+                        "id": 6,
+                        "state": 3,
+                        "type": 3
+                    },
+                    {
+                        "AGE": "58",
+                        "GENDER": "F",
+                        "NAME": "Ninabeth Capaning",
+                        "ROOM_TEXT": "Twin with MargaretRowland.",
+                        "ROOM_TYPE": "2",
+                        "id": 7,
+                        "state": 3,
+                        "type": 3
+                    },
+                    {
+                        "AGE": "46",
+                        "GENDER": "F",
+                        "NAME": "Jennifer Mulrooney",
+                        "ROOM_TEXT": "Twin with RileyMulrooney.",
+                        "ROOM_TYPE": "2",
+                        "id": 8,
+                        "state": 4,
+                        "type": 3
+                    },
+                    {
+                        "AGE": "67",
+                        "GENDER": "F",
+                        "NAME": "Debra Scott",
+                        "ROOM_TEXT": "Spouse is JerryScott.",
+                        "ROOM_TYPE": "2",
+                        "id": 9,
+                        "state": 4,
+                        "type": 3
+                    },
+                    {
+                        "AGE": "31",
+                        "GENDER": "M",
+                        "NAME": "Adam Guntharp",
+                        "ROOM_TEXT": "",
+                        "ROOM_TYPE": "2",
+                        "id": 10,
+                        "state": 5,
+                        "type": 1
+                    },
+                    {
+                        "AGE": "64",
+                        "GENDER": "M",
+                        "NAME": "Jerry Scott",
+                        "ROOM_TEXT": "Spouse is DebraScott.",
+                        "ROOM_TYPE": "2",
+                        "id": 11,
+                        "state": 5,
+                        "type": 1
+                    },
+                    {
+                        "AGE": "17",
+                        "GENDER": "F",
+                        "NAME": "Riley Mulrooney",
+                        "ROOM_TEXT": "Twin with JenniferMulrooney.",
+                        "ROOM_TYPE": "2",
+                        "id": 12,
+                        "state": 6,
+                        "type": 4
+                    },
+                    {
+                        "AGE": "57",
+                        "GENDER": "F",
+                        "NAME": "Melissa Lindsey",
+                        "ROOM_TEXT": "Spouse is David KeithLindsey.",
+                        "ROOM_TYPE": "2",
+                        "id": 13,
+                        "state": 7,
+                        "type": 3
+                    },
+                    {
+                        "AGE": "64",
+                        "GENDER": "M",
+                        "NAME": "David Lindsey",
+                        "ROOM_TEXT": "Spouse is MelissaLindsey.",
+                        "ROOM_TYPE": "2",
+                        "id": 14,
+                        "state": 8,
+                        "type": 1
+                    },
+                    {
+                        "AGE": "18",
+                        "GENDER": "F",
+                        "NAME": "Avery Tate",
+                        "ROOM_TEXT": "",
+                        "ROOM_TYPE": "3",
+                        "id": 15,
+                        "state": 9,
+                        "type": 3
+                    },
+                    {
+                        "AGE": "18",
+                        "GENDER": "F",
+                        "NAME": "Aubrey Leake",
+                        "ROOM_TEXT": "",
+                        "ROOM_TYPE": "3",
+                        "id": 16,
+                        "state": 9,
+                        "type": 3
+                    },
+                    {
+                        "AGE": "18",
+                        "GENDER": "F",
+                        "NAME": "Eron Hendrix",
+                        "ROOM_TEXT": "",
+                        "ROOM_TYPE": "3",
+                        "id": 17,
+                        "state": 9,
+                        "type": 3
+                    },
+                    {
+                        "AGE": "18",
+                        "GENDER": "F",
+                        "NAME": "Molly Billingsley",
+                        "ROOM_TEXT": "",
+                        "ROOM_TYPE": "3",
+                        "id": 18,
+                        "state": 10,
+                        "type": 3
+                    },
+                    {
+                        "AGE": "18",
+                        "GENDER": "F",
+                        "NAME": "Gabryale Adams",
+                        "ROOM_TEXT": "",
+                        "ROOM_TYPE": "3",
+                        "id": 19,
+                        "state": 10,
+                        "type": 3
+                    },
+                    {
+                        "AGE": "59",
+                        "GENDER": "F",
+                        "NAME": "Lisa Richardson",
+                        "ROOM_TEXT": "",
+                        "ROOM_TYPE": "3",
+                        "id": 20,
+                        "state": 10,
+                        "type": 3
+                    },
+                    {
+                        "AGE": "59",
+                        "GENDER": "F",
+                        "NAME": "Sheila Morton",
+                        "ROOM_TEXT": "tpl w/Lisa Richardson & Katie Schaefer",
+                        "ROOM_TYPE": "3",
+                        "id": 21,
+                        "state": 11,
+                        "type": 3
+                    },
+                    {
+                        "AGE": "41",
+                        "GENDER": "F",
+                        "NAME": "Katie Schaefer",
+                        "ROOM_TEXT": "",
+                        "ROOM_TYPE": "3",
+                        "id": 22,
+                        "state": 11,
+                        "type": 3
+                    }
+                ],
+                "city": "Venice",
+                "departureDate": "09-JUN-22",
+                "groupId": "111869",
+                "history": [
+                    {
+                        "creataAt": 1685818134336,
+                        "message": "Saved trip details for tripId <strong>0606/ITA/2</strong> by admin: admin"
+                    },
+                    {
+                        "card": {},
+                        "endState": "",
+                        "guest": {},
+                        "message": "",
+                        "startState": ""
+                    }
+                ],
+                "tripCode": "0606/ITA/2"
+            },
+            {
+                "arrivalDate": "09-JUN-22",
+                "boards": [
+                    {
+                        "accept": 3,
+                        "capacity": 1,
+                        "color": "danger",
+                        "guests": [
+                            {
+                                "AGE": "79",
+                                "BIRTH_DT": "05-Aug-42",
+                                "GENDER": "F",
+                                "GROUP_ID": "111869",
+                                "NAME": "Robbie Boyd",
+                                "PASSPORT_COUNTRY_OF_ISSUE": "US",
+                                "PASSPORT_NUMBER": "565089450",
+                                "PAXTYPE": "P",
+                                "PAX_ID": "23218",
+                                "PRODUCT_LINE": "H",
+                                "ROOM_ASSIGNMENT": "Unassigned",
+                                "ROOM_TEXT": "",
+                                "ROOM_TYPE": "1",
+                                "SALES_TEAM": "ROM"
+                            }
+                        ],
+                        "state": 0,
+                        "title": "Room 1-Single"
+                    },
+                    {
+                        "accept": 3,
+                        "capacity": 2,
+                        "color": "primary",
+                        "guests": [
+                            {
+                                "AGE": "39",
+                                "BIRTH_DT": "03-Dec-82",
+                                "GENDER": "F",
+                                "GROUP_ID": "111869",
+                                "NAME": "Anna Garner",
+                                "PASSPORT_COUNTRY_OF_ISSUE": "US",
+                                "PASSPORT_NUMBER": "A05384600",
+                                "PAXTYPE": "H",
+                                "PAX_ID": "2365",
+                                "PRODUCT_LINE": "H",
+                                "ROOM_ASSIGNMENT": "7",
+                                "ROOM_TEXT": "twin w/Stephanie Allen",
+                                "ROOM_TYPE": "2",
+                                "SALES_TEAM": "ROM"
+                            },
+                            {
+                                "AGE": "39",
+                                "BIRTH_DT": "26-Feb-83",
+                                "GENDER": "F",
+                                "GROUP_ID": "111869",
+                                "NAME": "Stephanie Allen",
+                                "PASSPORT_COUNTRY_OF_ISSUE": "",
+                                "PASSPORT_NUMBER": "",
+                                "PAXTYPE": "A",
+                                "PAX_ID": "11088",
+                                "PRODUCT_LINE": "H",
+                                "ROOM_ASSIGNMENT": "7",
+                                "ROOM_TEXT": "",
+                                "ROOM_TYPE": "2",
+                                "SALES_TEAM": "ROM"
+                            }
+                        ],
+                        "state": 1,
+                        "title": "Room 2-Double"
+                    },
+                    {
+                        "accept": 3,
+                        "capacity": 2,
+                        "color": "primary",
+                        "guests": [
+                            {
+                                "AGE": "65",
+                                "BIRTH_DT": "14-Aug-56",
+                                "GENDER": "F",
+                                "GROUP_ID": "111869",
+                                "NAME": "Barbara Jones",
+                                "PASSPORT_COUNTRY_OF_ISSUE": "US",
+                                "PASSPORT_NUMBER": "A02205849",
+                                "PAXTYPE": "P",
+                                "PAX_ID": "3006",
+                                "PRODUCT_LINE": "H",
+                                "ROOM_ASSIGNMENT": "5",
+                                "ROOM_TEXT": "Twin with ElizabethTidwell.",
+                                "ROOM_TYPE": "2",
+                                "SALES_TEAM": "ROM"
+                            },
+                            {
+                                "AGE": "60",
+                                "BIRTH_DT": "14-Feb-62",
+                                "GENDER": "F",
+                                "GROUP_ID": "111869",
+                                "NAME": "Mary Tidwell",
+                                "PASSPORT_COUNTRY_OF_ISSUE": "US",
+                                "PASSPORT_NUMBER": "512156447",
+                                "PAXTYPE": "P",
+                                "PAX_ID": "3038",
+                                "PRODUCT_LINE": "H",
+                                "ROOM_ASSIGNMENT": "5",
+                                "ROOM_TEXT": "Twin with BarbaraJones.",
+                                "ROOM_TYPE": "2",
+                                "SALES_TEAM": "ROM"
+                            }
+                        ],
+                        "state": 2,
+                        "title": "Room 3-Double"
+                    },
+                    {
+                        "accept": 3,
+                        "capacity": 2,
+                        "color": "primary",
+                        "guests": [
+                            {
+                                "AGE": "59",
+                                "BIRTH_DT": "03-Oct-62",
+                                "GENDER": "F",
+                                "GROUP_ID": "111869",
+                                "NAME": "Margaret Rowland",
+                                "PASSPORT_COUNTRY_OF_ISSUE": "US",
+                                "PASSPORT_NUMBER": "665099128",
+                                "PAXTYPE": "P",
+                                "PAX_ID": "8768",
+                                "PRODUCT_LINE": "H",
+                                "ROOM_ASSIGNMENT": "4",
+                                "ROOM_TEXT": "Twin with NinabethCapaning.",
+                                "ROOM_TYPE": "2",
+                                "SALES_TEAM": "ROM"
+                            },
+                            {
+                                "AGE": "58",
+                                "BIRTH_DT": "01-Sep-63",
+                                "GENDER": "F",
+                                "GROUP_ID": "111869",
+                                "NAME": "Ninabeth Capaning",
+                                "PASSPORT_COUNTRY_OF_ISSUE": "US",
+                                "PASSPORT_NUMBER": "652683667",
+                                "PAXTYPE": "P",
+                                "PAX_ID": "9877",
+                                "PRODUCT_LINE": "H",
+                                "ROOM_ASSIGNMENT": "4",
+                                "ROOM_TEXT": "Twin with MargaretRowland.",
+                                "ROOM_TYPE": "2",
+                                "SALES_TEAM": "ROM"
+                            }
+                        ],
+                        "state": 3,
+                        "title": "Room 4-Double"
+                    },
+                    {
+                        "accept": 3,
+                        "capacity": 2,
+                        "color": "primary",
+                        "guests": [
+                            {
+                                "AGE": "46",
+                                "BIRTH_DT": "04-May-76",
+                                "GENDER": "F",
+                                "GROUP_ID": "111869",
+                                "NAME": "Jennifer Mulrooney",
+                                "PASSPORT_COUNTRY_OF_ISSUE": "US",
+                                "PASSPORT_NUMBER": "548142003",
+                                "PAXTYPE": "P",
+                                "PAX_ID": "3168",
+                                "PRODUCT_LINE": "H",
+                                "ROOM_ASSIGNMENT": "3",
+                                "ROOM_TEXT": "Twin with RileyMulrooney.",
+                                "ROOM_TYPE": "2",
+                                "SALES_TEAM": "ROM"
+                            },
+                            {
+                                "AGE": "67",
+                                "BIRTH_DT": "24-Jan-55",
+                                "GENDER": "F",
+                                "GROUP_ID": "111869",
+                                "NAME": "Debra Scott",
+                                "PASSPORT_COUNTRY_OF_ISSUE": "US",
+                                "PASSPORT_NUMBER": "665165268",
+                                "PAXTYPE": "P",
+                                "PAX_ID": "2363",
+                                "PRODUCT_LINE": "H",
+                                "ROOM_ASSIGNMENT": "2",
+                                "ROOM_TEXT": "Spouse is JerryScott.",
+                                "ROOM_TYPE": "2",
+                                "SALES_TEAM": "ROM"
+                            }
+                        ],
+                        "state": 4,
+                        "title": "Room 5-Double"
+                    },
+                    {
+                        "accept": 1,
+                        "capacity": 2,
+                        "color": "primary",
+                        "guests": [
+                            {
+                                "AGE": "31",
+                                "BIRTH_DT": "25-Feb-91",
+                                "GENDER": "M",
+                                "GROUP_ID": "111869",
+                                "NAME": "Adam Guntharp",
+                                "PASSPORT_COUNTRY_OF_ISSUE": "US",
+                                "PASSPORT_NUMBER": "520351985",
+                                "PAXTYPE": "P",
+                                "PAX_ID": "2636",
+                                "PRODUCT_LINE": "H",
+                                "ROOM_ASSIGNMENT": "Unassigned",
+                                "ROOM_TEXT": "",
+                                "ROOM_TYPE": "2",
+                                "SALES_TEAM": "ROM"
+                            },
+                            {
+                                "AGE": "64",
+                                "BIRTH_DT": "15-Nov-57",
+                                "GENDER": "M",
+                                "GROUP_ID": "111869",
+                                "NAME": "Jerry Scott",
+                                "PASSPORT_COUNTRY_OF_ISSUE": "US",
+                                "PASSPORT_NUMBER": "665165267",
+                                "PAXTYPE": "P",
+                                "PAX_ID": "2362",
+                                "PRODUCT_LINE": "H",
+                                "ROOM_ASSIGNMENT": "2",
+                                "ROOM_TEXT": "Spouse is DebraScott.",
+                                "ROOM_TYPE": "2",
+                                "SALES_TEAM": "ROM"
+                            }
+                        ],
+                        "state": 5,
+                        "title": "Room 6-Double"
+                    },
+                    {
+                        "accept": 4,
+                        "capacity": 2,
+                        "color": "primary",
+                        "guests": [
+                            {
+                                "AGE": "17",
+                                "BIRTH_DT": "28-Jan-05",
+                                "GENDER": "F",
+                                "GROUP_ID": "111869",
+                                "NAME": "Riley Mulrooney",
+                                "PASSPORT_COUNTRY_OF_ISSUE": "US",
+                                "PASSPORT_NUMBER": "A02083841",
+                                "PAXTYPE": "P",
+                                "PAX_ID": "2629",
+                                "PRODUCT_LINE": "H",
+                                "ROOM_ASSIGNMENT": "3",
+                                "ROOM_TEXT": "Twin with JenniferMulrooney.",
+                                "ROOM_TYPE": "2",
+                                "SALES_TEAM": "ROM"
+                            }
+                        ],
+                        "state": 6,
+                        "title": "Room 7-Double"
+                    },
+                    {
+                        "accept": 3,
+                        "capacity": 2,
+                        "color": "primary",
+                        "guests": [
+                            {
+                                "AGE": "57",
+                                "BIRTH_DT": "06-Jul-64",
+                                "GENDER": "F",
+                                "GROUP_ID": "111869",
+                                "NAME": "Melissa Lindsey",
+                                "PASSPORT_COUNTRY_OF_ISSUE": "US",
+                                "PASSPORT_NUMBER": "673041851",
+                                "PAXTYPE": "P",
+                                "PAX_ID": "2635",
+                                "PRODUCT_LINE": "H",
+                                "ROOM_ASSIGNMENT": "1",
+                                "ROOM_TEXT": "Spouse is David KeithLindsey.",
+                                "ROOM_TYPE": "2",
+                                "SALES_TEAM": "ROM"
+                            }
+                        ],
+                        "state": 7,
+                        "title": "Room 8-Double"
+                    },
+                    {
+                        "accept": 1,
+                        "capacity": 2,
+                        "color": "primary",
+                        "guests": [
+                            {
+                                "AGE": "64",
+                                "BIRTH_DT": "24-Nov-57",
+                                "GENDER": "M",
+                                "GROUP_ID": "111869",
+                                "NAME": "David Lindsey",
+                                "PASSPORT_COUNTRY_OF_ISSUE": "US",
+                                "PASSPORT_NUMBER": "A01686924",
+                                "PAXTYPE": "A",
+                                "PAX_ID": "2760",
+                                "PRODUCT_LINE": "H",
+                                "ROOM_ASSIGNMENT": "1",
+                                "ROOM_TEXT": "Spouse is MelissaLindsey.",
+                                "ROOM_TYPE": "2",
+                                "SALES_TEAM": "ROM"
+                            }
+                        ],
+                        "state": 8,
+                        "title": "Room 9-Double"
+                    },
+                    {
+                        "accept": 3,
+                        "capacity": 3,
+                        "color": "warning",
+                        "guests": [
+                            {
+                                "AGE": "18",
+                                "BIRTH_DT": "24-Jul-03",
+                                "GENDER": "F",
+                                "GROUP_ID": "111869",
+                                "NAME": "Avery Tate",
+                                "PASSPORT_COUNTRY_OF_ISSUE": "US",
+                                "PASSPORT_NUMBER": "660798318",
+                                "PAXTYPE": "P",
+                                "PAX_ID": "2132",
+                                "PRODUCT_LINE": "H",
+                                "ROOM_ASSIGNMENT": "Unassigned",
+                                "ROOM_TEXT": "",
+                                "ROOM_TYPE": "3",
+                                "SALES_TEAM": "ROM"
+                            },
+                            {
+                                "AGE": "18",
+                                "BIRTH_DT": "04-May-04",
+                                "GENDER": "F",
+                                "GROUP_ID": "111869",
+                                "NAME": "Aubrey Leake",
+                                "PASSPORT_COUNTRY_OF_ISSUE": "US",
+                                "PASSPORT_NUMBER": "677565532",
+                                "PAXTYPE": "P",
+                                "PAX_ID": "14983",
+                                "PRODUCT_LINE": "H",
+                                "ROOM_ASSIGNMENT": "Unassigned",
+                                "ROOM_TEXT": "",
+                                "ROOM_TYPE": "3",
+                                "SALES_TEAM": "ROM"
+                            },
+                            {
+                                "AGE": "18",
+                                "BIRTH_DT": "20-Apr-04",
+                                "GENDER": "F",
+                                "GROUP_ID": "111869",
+                                "NAME": "Eron Hendrix",
+                                "PASSPORT_COUNTRY_OF_ISSUE": "US",
+                                "PASSPORT_NUMBER": "576047392",
+                                "PAXTYPE": "P",
+                                "PAX_ID": "17318",
+                                "PRODUCT_LINE": "H",
+                                "ROOM_ASSIGNMENT": "Unassigned",
+                                "ROOM_TEXT": "",
+                                "ROOM_TYPE": "3",
+                                "SALES_TEAM": "ROM"
+                            }
+                        ],
+                        "state": 9,
+                        "title": "Room 10-Triple"
+                    },
+                    {
+                        "accept": 3,
+                        "capacity": 3,
+                        "color": "warning",
+                        "guests": [
+                            {
+                                "AGE": "18",
+                                "BIRTH_DT": "06-Aug-03",
+                                "GENDER": "F",
+                                "GROUP_ID": "111869",
+                                "NAME": "Molly Billingsley",
+                                "PASSPORT_COUNTRY_OF_ISSUE": "US",
+                                "PASSPORT_NUMBER": "582834907",
+                                "PAXTYPE": "P",
+                                "PAX_ID": "2127",
+                                "PRODUCT_LINE": "H",
+                                "ROOM_ASSIGNMENT": "Unassigned",
+                                "ROOM_TEXT": "",
+                                "ROOM_TYPE": "3",
+                                "SALES_TEAM": "ROM"
+                            },
+                            {
+                                "AGE": "18",
+                                "BIRTH_DT": "22-Oct-03",
+                                "GENDER": "F",
+                                "GROUP_ID": "111869",
+                                "NAME": "Gabryale Adams",
+                                "PASSPORT_COUNTRY_OF_ISSUE": "US",
+                                "PASSPORT_NUMBER": "657006045",
+                                "PAXTYPE": "P",
+                                "PAX_ID": "2126",
+                                "PRODUCT_LINE": "H",
+                                "ROOM_ASSIGNMENT": "Unassigned",
+                                "ROOM_TEXT": "",
+                                "ROOM_TYPE": "3",
+                                "SALES_TEAM": "ROM"
+                            },
+                            {
+                                "AGE": "59",
+                                "BIRTH_DT": "07-Feb-63",
+                                "GENDER": "F",
+                                "GROUP_ID": "111869",
+                                "NAME": "Lisa Richardson",
+                                "PASSPORT_COUNTRY_OF_ISSUE": "US",
+                                "PASSPORT_NUMBER": "595576238",
+                                "PAXTYPE": "P",
+                                "PAX_ID": "2130",
+                                "PRODUCT_LINE": "H",
+                                "ROOM_ASSIGNMENT": "6",
+                                "ROOM_TEXT": "",
+                                "ROOM_TYPE": "3",
+                                "SALES_TEAM": "ROM"
+                            }
+                        ],
+                        "state": 10,
+                        "title": "Room 11-Triple"
+                    },
+                    {
+                        "accept": 3,
+                        "capacity": 3,
+                        "color": "warning",
+                        "guests": [
+                            {
+                                "AGE": "59",
+                                "BIRTH_DT": "24-Sep-62",
+                                "GENDER": "F",
+                                "GROUP_ID": "111869",
+                                "NAME": "Sheila Morton",
+                                "PASSPORT_COUNTRY_OF_ISSUE": "US",
+                                "PASSPORT_NUMBER": "667524263",
+                                "PAXTYPE": "P",
+                                "PAX_ID": "11006",
+                                "PRODUCT_LINE": "H",
+                                "ROOM_ASSIGNMENT": "6",
+                                "ROOM_TEXT": "tpl w/Lisa Richardson & Katie Schaefer",
+                                "ROOM_TYPE": "3",
+                                "SALES_TEAM": "ROM"
+                            },
+                            {
+                                "AGE": "41",
+                                "BIRTH_DT": "18-Apr-81",
+                                "GENDER": "F",
+                                "GROUP_ID": "111869",
+                                "NAME": "Katie Schaefer",
+                                "PASSPORT_COUNTRY_OF_ISSUE": "US",
+                                "PASSPORT_NUMBER": "659828167",
+                                "PAXTYPE": "P",
+                                "PAX_ID": "2131",
+                                "PRODUCT_LINE": "H",
+                                "ROOM_ASSIGNMENT": "6",
+                                "ROOM_TEXT": "",
+                                "ROOM_TYPE": "3",
+                                "SALES_TEAM": "ROM"
+                            }
+                        ],
+                        "state": 11,
+                        "title": "Room 12-Triple"
+                    },
+                    {
+                        "capacity": 10000,
+                        "color": "danger",
+                        "guests": [],
+                        "state": -1,
+                        "title": "Room Temporary"
+                    }
+                ],
+                "cards": [
+                    {
+                        "AGE": "79",
+                        "GENDER": "F",
+                        "NAME": "Robbie Boyd",
+                        "ROOM_TEXT": "",
+                        "ROOM_TYPE": "1",
+                        "id": 23,
+                        "state": 0,
+                        "type": 3
+                    },
+                    {
+                        "AGE": "39",
+                        "GENDER": "F",
+                        "NAME": "Anna Garner",
+                        "ROOM_TEXT": "twin w/Stephanie Allen",
+                        "ROOM_TYPE": "2",
+                        "id": 24,
+                        "state": 1,
+                        "type": 3
+                    },
+                    {
+                        "AGE": "39",
+                        "GENDER": "F",
+                        "NAME": "Stephanie Allen",
+                        "ROOM_TEXT": "",
+                        "ROOM_TYPE": "2",
+                        "id": 25,
+                        "state": 1,
+                        "type": 3
+                    },
+                    {
+                        "AGE": "65",
+                        "GENDER": "F",
+                        "NAME": "Barbara Jones",
+                        "ROOM_TEXT": "Twin with ElizabethTidwell.",
+                        "ROOM_TYPE": "2",
+                        "id": 26,
+                        "state": 2,
+                        "type": 3
+                    },
+                    {
+                        "AGE": "60",
+                        "GENDER": "F",
+                        "NAME": "Mary Tidwell",
+                        "ROOM_TEXT": "Twin with BarbaraJones.",
+                        "ROOM_TYPE": "2",
+                        "id": 27,
+                        "state": 2,
+                        "type": 3
+                    },
+                    {
+                        "AGE": "59",
+                        "GENDER": "F",
+                        "NAME": "Margaret Rowland",
+                        "ROOM_TEXT": "Twin with NinabethCapaning.",
+                        "ROOM_TYPE": "2",
+                        "id": 28,
+                        "state": 3,
+                        "type": 3
+                    },
+                    {
+                        "AGE": "58",
+                        "GENDER": "F",
+                        "NAME": "Ninabeth Capaning",
+                        "ROOM_TEXT": "Twin with MargaretRowland.",
+                        "ROOM_TYPE": "2",
+                        "id": 29,
+                        "state": 3,
+                        "type": 3
+                    },
+                    {
+                        "AGE": "46",
+                        "GENDER": "F",
+                        "NAME": "Jennifer Mulrooney",
+                        "ROOM_TEXT": "Twin with RileyMulrooney.",
+                        "ROOM_TYPE": "2",
+                        "id": 30,
+                        "state": 4,
+                        "type": 3
+                    },
+                    {
+                        "AGE": "67",
+                        "GENDER": "F",
+                        "NAME": "Debra Scott",
+                        "ROOM_TEXT": "Spouse is JerryScott.",
+                        "ROOM_TYPE": "2",
+                        "id": 31,
+                        "state": 4,
+                        "type": 3
+                    },
+                    {
+                        "AGE": "31",
+                        "GENDER": "M",
+                        "NAME": "Adam Guntharp",
+                        "ROOM_TEXT": "",
+                        "ROOM_TYPE": "2",
+                        "id": 32,
+                        "state": 5,
+                        "type": 1
+                    },
+                    {
+                        "AGE": "64",
+                        "GENDER": "M",
+                        "NAME": "Jerry Scott",
+                        "ROOM_TEXT": "Spouse is DebraScott.",
+                        "ROOM_TYPE": "2",
+                        "id": 33,
+                        "state": 5,
+                        "type": 1
+                    },
+                    {
+                        "AGE": "17",
+                        "GENDER": "F",
+                        "NAME": "Riley Mulrooney",
+                        "ROOM_TEXT": "Twin with JenniferMulrooney.",
+                        "ROOM_TYPE": "2",
+                        "id": 34,
+                        "state": 6,
+                        "type": 4
+                    },
+                    {
+                        "AGE": "57",
+                        "GENDER": "F",
+                        "NAME": "Melissa Lindsey",
+                        "ROOM_TEXT": "Spouse is David KeithLindsey.",
+                        "ROOM_TYPE": "2",
+                        "id": 35,
+                        "state": 7,
+                        "type": 3
+                    },
+                    {
+                        "AGE": "64",
+                        "GENDER": "M",
+                        "NAME": "David Lindsey",
+                        "ROOM_TEXT": "Spouse is MelissaLindsey.",
+                        "ROOM_TYPE": "2",
+                        "id": 36,
+                        "state": 8,
+                        "type": 1
+                    },
+                    {
+                        "AGE": "18",
+                        "GENDER": "F",
+                        "NAME": "Avery Tate",
+                        "ROOM_TEXT": "",
+                        "ROOM_TYPE": "3",
+                        "id": 37,
+                        "state": 9,
+                        "type": 3
+                    },
+                    {
+                        "AGE": "18",
+                        "GENDER": "F",
+                        "NAME": "Aubrey Leake",
+                        "ROOM_TEXT": "",
+                        "ROOM_TYPE": "3",
+                        "id": 38,
+                        "state": 9,
+                        "type": 3
+                    },
+                    {
+                        "AGE": "18",
+                        "GENDER": "F",
+                        "NAME": "Eron Hendrix",
+                        "ROOM_TEXT": "",
+                        "ROOM_TYPE": "3",
+                        "id": 39,
+                        "state": 9,
+                        "type": 3
+                    },
+                    {
+                        "AGE": "18",
+                        "GENDER": "F",
+                        "NAME": "Molly Billingsley",
+                        "ROOM_TEXT": "",
+                        "ROOM_TYPE": "3",
+                        "id": 40,
+                        "state": 10,
+                        "type": 3
+                    },
+                    {
+                        "AGE": "18",
+                        "GENDER": "F",
+                        "NAME": "Gabryale Adams",
+                        "ROOM_TEXT": "",
+                        "ROOM_TYPE": "3",
+                        "id": 41,
+                        "state": 10,
+                        "type": 3
+                    },
+                    {
+                        "AGE": "59",
+                        "GENDER": "F",
+                        "NAME": "Lisa Richardson",
+                        "ROOM_TEXT": "",
+                        "ROOM_TYPE": "3",
+                        "id": 42,
+                        "state": 10,
+                        "type": 3
+                    },
+                    {
+                        "AGE": "59",
+                        "GENDER": "F",
+                        "NAME": "Sheila Morton",
+                        "ROOM_TEXT": "tpl w/Lisa Richardson & Katie Schaefer",
+                        "ROOM_TYPE": "3",
+                        "id": 43,
+                        "state": 11,
+                        "type": 3
+                    },
+                    {
+                        "AGE": "41",
+                        "GENDER": "F",
+                        "NAME": "Katie Schaefer",
+                        "ROOM_TEXT": "",
+                        "ROOM_TYPE": "3",
+                        "id": 44,
+                        "state": 11,
+                        "type": 3
+                    }
+                ],
+                "city": "Florence",
+                "departureDate": "12-JUN-22",
+                "groupId": "111869",
+                "history": [
+                    {
+                        "creataAt": 1685818134336,
+                        "message": "Saved trip details for tripId <strong>0606/ITA/2</strong> by admin: admin"
+                    },
+                    {
+                        "card": {},
+                        "endState": "",
+                        "guest": {},
+                        "message": "",
+                        "startState": ""
+                    }
+                ],
+                "tripCode": "0606/ITA/2"
+            },
+            {
+                "arrivalDate": "12-JUN-22",
+                "boards": [
+                    {
+                        "accept": 3,
+                        "capacity": 1,
+                        "color": "danger",
+                        "guests": [
+                            {
+                                "AGE": "79",
+                                "BIRTH_DT": "05-Aug-42",
+                                "GENDER": "F",
+                                "GROUP_ID": "111869",
+                                "NAME": "Robbie Boyd",
+                                "PASSPORT_COUNTRY_OF_ISSUE": "US",
+                                "PASSPORT_NUMBER": "565089450",
+                                "PAXTYPE": "P",
+                                "PAX_ID": "23218",
+                                "PRODUCT_LINE": "H",
+                                "ROOM_ASSIGNMENT": "Unassigned",
+                                "ROOM_TEXT": "",
+                                "ROOM_TYPE": "1",
+                                "SALES_TEAM": "ROM"
+                            }
+                        ],
+                        "state": 0,
+                        "title": "Room 1-Single"
+                    },
+                    {
+                        "accept": 3,
+                        "capacity": 2,
+                        "color": "primary",
+                        "guests": [
+                            {
+                                "AGE": "39",
+                                "BIRTH_DT": "03-Dec-82",
+                                "GENDER": "F",
+                                "GROUP_ID": "111869",
+                                "NAME": "Anna Garner",
+                                "PASSPORT_COUNTRY_OF_ISSUE": "US",
+                                "PASSPORT_NUMBER": "A05384600",
+                                "PAXTYPE": "H",
+                                "PAX_ID": "2365",
+                                "PRODUCT_LINE": "H",
+                                "ROOM_ASSIGNMENT": "7",
+                                "ROOM_TEXT": "twin w/Stephanie Allen",
+                                "ROOM_TYPE": "2",
+                                "SALES_TEAM": "ROM"
+                            },
+                            {
+                                "AGE": "39",
+                                "BIRTH_DT": "26-Feb-83",
+                                "GENDER": "F",
+                                "GROUP_ID": "111869",
+                                "NAME": "Stephanie Allen",
+                                "PASSPORT_COUNTRY_OF_ISSUE": "",
+                                "PASSPORT_NUMBER": "",
+                                "PAXTYPE": "A",
+                                "PAX_ID": "11088",
+                                "PRODUCT_LINE": "H",
+                                "ROOM_ASSIGNMENT": "7",
+                                "ROOM_TEXT": "",
+                                "ROOM_TYPE": "2",
+                                "SALES_TEAM": "ROM"
+                            }
+                        ],
+                        "state": 1,
+                        "title": "Room 2-Double"
+                    },
+                    {
+                        "accept": 3,
+                        "capacity": 2,
+                        "color": "primary",
+                        "guests": [
+                            {
+                                "AGE": "65",
+                                "BIRTH_DT": "14-Aug-56",
+                                "GENDER": "F",
+                                "GROUP_ID": "111869",
+                                "NAME": "Barbara Jones",
+                                "PASSPORT_COUNTRY_OF_ISSUE": "US",
+                                "PASSPORT_NUMBER": "A02205849",
+                                "PAXTYPE": "P",
+                                "PAX_ID": "3006",
+                                "PRODUCT_LINE": "H",
+                                "ROOM_ASSIGNMENT": "5",
+                                "ROOM_TEXT": "Twin with ElizabethTidwell.",
+                                "ROOM_TYPE": "2",
+                                "SALES_TEAM": "ROM"
+                            },
+                            {
+                                "AGE": "60",
+                                "BIRTH_DT": "14-Feb-62",
+                                "GENDER": "F",
+                                "GROUP_ID": "111869",
+                                "NAME": "Mary Tidwell",
+                                "PASSPORT_COUNTRY_OF_ISSUE": "US",
+                                "PASSPORT_NUMBER": "512156447",
+                                "PAXTYPE": "P",
+                                "PAX_ID": "3038",
+                                "PRODUCT_LINE": "H",
+                                "ROOM_ASSIGNMENT": "5",
+                                "ROOM_TEXT": "Twin with BarbaraJones.",
+                                "ROOM_TYPE": "2",
+                                "SALES_TEAM": "ROM"
+                            }
+                        ],
+                        "state": 2,
+                        "title": "Room 3-Double"
+                    },
+                    {
+                        "accept": 3,
+                        "capacity": 2,
+                        "color": "primary",
+                        "guests": [
+                            {
+                                "AGE": "59",
+                                "BIRTH_DT": "03-Oct-62",
+                                "GENDER": "F",
+                                "GROUP_ID": "111869",
+                                "NAME": "Margaret Rowland",
+                                "PASSPORT_COUNTRY_OF_ISSUE": "US",
+                                "PASSPORT_NUMBER": "665099128",
+                                "PAXTYPE": "P",
+                                "PAX_ID": "8768",
+                                "PRODUCT_LINE": "H",
+                                "ROOM_ASSIGNMENT": "4",
+                                "ROOM_TEXT": "Twin with NinabethCapaning.",
+                                "ROOM_TYPE": "2",
+                                "SALES_TEAM": "ROM"
+                            },
+                            {
+                                "AGE": "58",
+                                "BIRTH_DT": "01-Sep-63",
+                                "GENDER": "F",
+                                "GROUP_ID": "111869",
+                                "NAME": "Ninabeth Capaning",
+                                "PASSPORT_COUNTRY_OF_ISSUE": "US",
+                                "PASSPORT_NUMBER": "652683667",
+                                "PAXTYPE": "P",
+                                "PAX_ID": "9877",
+                                "PRODUCT_LINE": "H",
+                                "ROOM_ASSIGNMENT": "4",
+                                "ROOM_TEXT": "Twin with MargaretRowland.",
+                                "ROOM_TYPE": "2",
+                                "SALES_TEAM": "ROM"
+                            }
+                        ],
+                        "state": 3,
+                        "title": "Room 4-Double"
+                    },
+                    {
+                        "accept": 3,
+                        "capacity": 2,
+                        "color": "primary",
+                        "guests": [
+                            {
+                                "AGE": "46",
+                                "BIRTH_DT": "04-May-76",
+                                "GENDER": "F",
+                                "GROUP_ID": "111869",
+                                "NAME": "Jennifer Mulrooney",
+                                "PASSPORT_COUNTRY_OF_ISSUE": "US",
+                                "PASSPORT_NUMBER": "548142003",
+                                "PAXTYPE": "P",
+                                "PAX_ID": "3168",
+                                "PRODUCT_LINE": "H",
+                                "ROOM_ASSIGNMENT": "3",
+                                "ROOM_TEXT": "Twin with RileyMulrooney.",
+                                "ROOM_TYPE": "2",
+                                "SALES_TEAM": "ROM"
+                            },
+                            {
+                                "AGE": "67",
+                                "BIRTH_DT": "24-Jan-55",
+                                "GENDER": "F",
+                                "GROUP_ID": "111869",
+                                "NAME": "Debra Scott",
+                                "PASSPORT_COUNTRY_OF_ISSUE": "US",
+                                "PASSPORT_NUMBER": "665165268",
+                                "PAXTYPE": "P",
+                                "PAX_ID": "2363",
+                                "PRODUCT_LINE": "H",
+                                "ROOM_ASSIGNMENT": "2",
+                                "ROOM_TEXT": "Spouse is JerryScott.",
+                                "ROOM_TYPE": "2",
+                                "SALES_TEAM": "ROM"
+                            }
+                        ],
+                        "state": 4,
+                        "title": "Room 5-Double"
+                    },
+                    {
+                        "accept": 1,
+                        "capacity": 2,
+                        "color": "primary",
+                        "guests": [
+                            {
+                                "AGE": "31",
+                                "BIRTH_DT": "25-Feb-91",
+                                "GENDER": "M",
+                                "GROUP_ID": "111869",
+                                "NAME": "Adam Guntharp",
+                                "PASSPORT_COUNTRY_OF_ISSUE": "US",
+                                "PASSPORT_NUMBER": "520351985",
+                                "PAXTYPE": "P",
+                                "PAX_ID": "2636",
+                                "PRODUCT_LINE": "H",
+                                "ROOM_ASSIGNMENT": "Unassigned",
+                                "ROOM_TEXT": "",
+                                "ROOM_TYPE": "2",
+                                "SALES_TEAM": "ROM"
+                            },
+                            {
+                                "AGE": "64",
+                                "BIRTH_DT": "15-Nov-57",
+                                "GENDER": "M",
+                                "GROUP_ID": "111869",
+                                "NAME": "Jerry Scott",
+                                "PASSPORT_COUNTRY_OF_ISSUE": "US",
+                                "PASSPORT_NUMBER": "665165267",
+                                "PAXTYPE": "P",
+                                "PAX_ID": "2362",
+                                "PRODUCT_LINE": "H",
+                                "ROOM_ASSIGNMENT": "2",
+                                "ROOM_TEXT": "Spouse is DebraScott.",
+                                "ROOM_TYPE": "2",
+                                "SALES_TEAM": "ROM"
+                            }
+                        ],
+                        "state": 5,
+                        "title": "Room 6-Double"
+                    },
+                    {
+                        "accept": 4,
+                        "capacity": 2,
+                        "color": "primary",
+                        "guests": [
+                            {
+                                "AGE": "17",
+                                "BIRTH_DT": "28-Jan-05",
+                                "GENDER": "F",
+                                "GROUP_ID": "111869",
+                                "NAME": "Riley Mulrooney",
+                                "PASSPORT_COUNTRY_OF_ISSUE": "US",
+                                "PASSPORT_NUMBER": "A02083841",
+                                "PAXTYPE": "P",
+                                "PAX_ID": "2629",
+                                "PRODUCT_LINE": "H",
+                                "ROOM_ASSIGNMENT": "3",
+                                "ROOM_TEXT": "Twin with JenniferMulrooney.",
+                                "ROOM_TYPE": "2",
+                                "SALES_TEAM": "ROM"
+                            }
+                        ],
+                        "state": 6,
+                        "title": "Room 7-Double"
+                    },
+                    {
+                        "accept": 3,
+                        "capacity": 2,
+                        "color": "primary",
+                        "guests": [
+                            {
+                                "AGE": "57",
+                                "BIRTH_DT": "06-Jul-64",
+                                "GENDER": "F",
+                                "GROUP_ID": "111869",
+                                "NAME": "Melissa Lindsey",
+                                "PASSPORT_COUNTRY_OF_ISSUE": "US",
+                                "PASSPORT_NUMBER": "673041851",
+                                "PAXTYPE": "P",
+                                "PAX_ID": "2635",
+                                "PRODUCT_LINE": "H",
+                                "ROOM_ASSIGNMENT": "1",
+                                "ROOM_TEXT": "Spouse is David KeithLindsey.",
+                                "ROOM_TYPE": "2",
+                                "SALES_TEAM": "ROM"
+                            }
+                        ],
+                        "state": 7,
+                        "title": "Room 8-Double"
+                    },
+                    {
+                        "accept": 1,
+                        "capacity": 2,
+                        "color": "primary",
+                        "guests": [
+                            {
+                                "AGE": "64",
+                                "BIRTH_DT": "24-Nov-57",
+                                "GENDER": "M",
+                                "GROUP_ID": "111869",
+                                "NAME": "David Lindsey",
+                                "PASSPORT_COUNTRY_OF_ISSUE": "US",
+                                "PASSPORT_NUMBER": "A01686924",
+                                "PAXTYPE": "A",
+                                "PAX_ID": "2760",
+                                "PRODUCT_LINE": "H",
+                                "ROOM_ASSIGNMENT": "1",
+                                "ROOM_TEXT": "Spouse is MelissaLindsey.",
+                                "ROOM_TYPE": "2",
+                                "SALES_TEAM": "ROM"
+                            }
+                        ],
+                        "state": 8,
+                        "title": "Room 9-Double"
+                    },
+                    {
+                        "accept": 3,
+                        "capacity": 3,
+                        "color": "warning",
+                        "guests": [
+                            {
+                                "AGE": "18",
+                                "BIRTH_DT": "24-Jul-03",
+                                "GENDER": "F",
+                                "GROUP_ID": "111869",
+                                "NAME": "Avery Tate",
+                                "PASSPORT_COUNTRY_OF_ISSUE": "US",
+                                "PASSPORT_NUMBER": "660798318",
+                                "PAXTYPE": "P",
+                                "PAX_ID": "2132",
+                                "PRODUCT_LINE": "H",
+                                "ROOM_ASSIGNMENT": "Unassigned",
+                                "ROOM_TEXT": "",
+                                "ROOM_TYPE": "3",
+                                "SALES_TEAM": "ROM"
+                            },
+                            {
+                                "AGE": "18",
+                                "BIRTH_DT": "04-May-04",
+                                "GENDER": "F",
+                                "GROUP_ID": "111869",
+                                "NAME": "Aubrey Leake",
+                                "PASSPORT_COUNTRY_OF_ISSUE": "US",
+                                "PASSPORT_NUMBER": "677565532",
+                                "PAXTYPE": "P",
+                                "PAX_ID": "14983",
+                                "PRODUCT_LINE": "H",
+                                "ROOM_ASSIGNMENT": "Unassigned",
+                                "ROOM_TEXT": "",
+                                "ROOM_TYPE": "3",
+                                "SALES_TEAM": "ROM"
+                            },
+                            {
+                                "AGE": "18",
+                                "BIRTH_DT": "20-Apr-04",
+                                "GENDER": "F",
+                                "GROUP_ID": "111869",
+                                "NAME": "Eron Hendrix",
+                                "PASSPORT_COUNTRY_OF_ISSUE": "US",
+                                "PASSPORT_NUMBER": "576047392",
+                                "PAXTYPE": "P",
+                                "PAX_ID": "17318",
+                                "PRODUCT_LINE": "H",
+                                "ROOM_ASSIGNMENT": "Unassigned",
+                                "ROOM_TEXT": "",
+                                "ROOM_TYPE": "3",
+                                "SALES_TEAM": "ROM"
+                            }
+                        ],
+                        "state": 9,
+                        "title": "Room 10-Triple"
+                    },
+                    {
+                        "accept": 3,
+                        "capacity": 3,
+                        "color": "warning",
+                        "guests": [
+                            {
+                                "AGE": "18",
+                                "BIRTH_DT": "06-Aug-03",
+                                "GENDER": "F",
+                                "GROUP_ID": "111869",
+                                "NAME": "Molly Billingsley",
+                                "PASSPORT_COUNTRY_OF_ISSUE": "US",
+                                "PASSPORT_NUMBER": "582834907",
+                                "PAXTYPE": "P",
+                                "PAX_ID": "2127",
+                                "PRODUCT_LINE": "H",
+                                "ROOM_ASSIGNMENT": "Unassigned",
+                                "ROOM_TEXT": "",
+                                "ROOM_TYPE": "3",
+                                "SALES_TEAM": "ROM"
+                            },
+                            {
+                                "AGE": "18",
+                                "BIRTH_DT": "22-Oct-03",
+                                "GENDER": "F",
+                                "GROUP_ID": "111869",
+                                "NAME": "Gabryale Adams",
+                                "PASSPORT_COUNTRY_OF_ISSUE": "US",
+                                "PASSPORT_NUMBER": "657006045",
+                                "PAXTYPE": "P",
+                                "PAX_ID": "2126",
+                                "PRODUCT_LINE": "H",
+                                "ROOM_ASSIGNMENT": "Unassigned",
+                                "ROOM_TEXT": "",
+                                "ROOM_TYPE": "3",
+                                "SALES_TEAM": "ROM"
+                            },
+                            {
+                                "AGE": "59",
+                                "BIRTH_DT": "07-Feb-63",
+                                "GENDER": "F",
+                                "GROUP_ID": "111869",
+                                "NAME": "Lisa Richardson",
+                                "PASSPORT_COUNTRY_OF_ISSUE": "US",
+                                "PASSPORT_NUMBER": "595576238",
+                                "PAXTYPE": "P",
+                                "PAX_ID": "2130",
+                                "PRODUCT_LINE": "H",
+                                "ROOM_ASSIGNMENT": "6",
+                                "ROOM_TEXT": "",
+                                "ROOM_TYPE": "3",
+                                "SALES_TEAM": "ROM"
+                            }
+                        ],
+                        "state": 10,
+                        "title": "Room 11-Triple"
+                    },
+                    {
+                        "accept": 3,
+                        "capacity": 3,
+                        "color": "warning",
+                        "guests": [
+                            {
+                                "AGE": "59",
+                                "BIRTH_DT": "24-Sep-62",
+                                "GENDER": "F",
+                                "GROUP_ID": "111869",
+                                "NAME": "Sheila Morton",
+                                "PASSPORT_COUNTRY_OF_ISSUE": "US",
+                                "PASSPORT_NUMBER": "667524263",
+                                "PAXTYPE": "P",
+                                "PAX_ID": "11006",
+                                "PRODUCT_LINE": "H",
+                                "ROOM_ASSIGNMENT": "6",
+                                "ROOM_TEXT": "tpl w/Lisa Richardson & Katie Schaefer",
+                                "ROOM_TYPE": "3",
+                                "SALES_TEAM": "ROM"
+                            },
+                            {
+                                "AGE": "41",
+                                "BIRTH_DT": "18-Apr-81",
+                                "GENDER": "F",
+                                "GROUP_ID": "111869",
+                                "NAME": "Katie Schaefer",
+                                "PASSPORT_COUNTRY_OF_ISSUE": "US",
+                                "PASSPORT_NUMBER": "659828167",
+                                "PAXTYPE": "P",
+                                "PAX_ID": "2131",
+                                "PRODUCT_LINE": "H",
+                                "ROOM_ASSIGNMENT": "6",
+                                "ROOM_TEXT": "",
+                                "ROOM_TYPE": "3",
+                                "SALES_TEAM": "ROM"
+                            }
+                        ],
+                        "state": 11,
+                        "title": "Room 12-Triple"
+                    },
+                    {
+                        "capacity": 10000,
+                        "color": "danger",
+                        "guests": [],
+                        "state": -1,
+                        "title": "Room Temporary"
+                    }
+                ],
+                "cards": [
+                    {
+                        "AGE": "79",
+                        "GENDER": "F",
+                        "NAME": "Robbie Boyd",
+                        "ROOM_TEXT": "",
+                        "ROOM_TYPE": "1",
+                        "id": 45,
+                        "state": 0,
+                        "type": 3
+                    },
+                    {
+                        "AGE": "39",
+                        "GENDER": "F",
+                        "NAME": "Anna Garner",
+                        "ROOM_TEXT": "twin w/Stephanie Allen",
+                        "ROOM_TYPE": "2",
+                        "id": 46,
+                        "state": 1,
+                        "type": 3
+                    },
+                    {
+                        "AGE": "39",
+                        "GENDER": "F",
+                        "NAME": "Stephanie Allen",
+                        "ROOM_TEXT": "",
+                        "ROOM_TYPE": "2",
+                        "id": 47,
+                        "state": 1,
+                        "type": 3
+                    },
+                    {
+                        "AGE": "65",
+                        "GENDER": "F",
+                        "NAME": "Barbara Jones",
+                        "ROOM_TEXT": "Twin with ElizabethTidwell.",
+                        "ROOM_TYPE": "2",
+                        "id": 48,
+                        "state": 2,
+                        "type": 3
+                    },
+                    {
+                        "AGE": "60",
+                        "GENDER": "F",
+                        "NAME": "Mary Tidwell",
+                        "ROOM_TEXT": "Twin with BarbaraJones.",
+                        "ROOM_TYPE": "2",
+                        "id": 49,
+                        "state": 2,
+                        "type": 3
+                    },
+                    {
+                        "AGE": "59",
+                        "GENDER": "F",
+                        "NAME": "Margaret Rowland",
+                        "ROOM_TEXT": "Twin with NinabethCapaning.",
+                        "ROOM_TYPE": "2",
+                        "id": 50,
+                        "state": 3,
+                        "type": 3
+                    },
+                    {
+                        "AGE": "58",
+                        "GENDER": "F",
+                        "NAME": "Ninabeth Capaning",
+                        "ROOM_TEXT": "Twin with MargaretRowland.",
+                        "ROOM_TYPE": "2",
+                        "id": 51,
+                        "state": 3,
+                        "type": 3
+                    },
+                    {
+                        "AGE": "46",
+                        "GENDER": "F",
+                        "NAME": "Jennifer Mulrooney",
+                        "ROOM_TEXT": "Twin with RileyMulrooney.",
+                        "ROOM_TYPE": "2",
+                        "id": 52,
+                        "state": 4,
+                        "type": 3
+                    },
+                    {
+                        "AGE": "67",
+                        "GENDER": "F",
+                        "NAME": "Debra Scott",
+                        "ROOM_TEXT": "Spouse is JerryScott.",
+                        "ROOM_TYPE": "2",
+                        "id": 53,
+                        "state": 4,
+                        "type": 3
+                    },
+                    {
+                        "AGE": "31",
+                        "GENDER": "M",
+                        "NAME": "Adam Guntharp",
+                        "ROOM_TEXT": "",
+                        "ROOM_TYPE": "2",
+                        "id": 54,
+                        "state": 5,
+                        "type": 1
+                    },
+                    {
+                        "AGE": "64",
+                        "GENDER": "M",
+                        "NAME": "Jerry Scott",
+                        "ROOM_TEXT": "Spouse is DebraScott.",
+                        "ROOM_TYPE": "2",
+                        "id": 55,
+                        "state": 5,
+                        "type": 1
+                    },
+                    {
+                        "AGE": "17",
+                        "GENDER": "F",
+                        "NAME": "Riley Mulrooney",
+                        "ROOM_TEXT": "Twin with JenniferMulrooney.",
+                        "ROOM_TYPE": "2",
+                        "id": 56,
+                        "state": 6,
+                        "type": 4
+                    },
+                    {
+                        "AGE": "57",
+                        "GENDER": "F",
+                        "NAME": "Melissa Lindsey",
+                        "ROOM_TEXT": "Spouse is David KeithLindsey.",
+                        "ROOM_TYPE": "2",
+                        "id": 57,
+                        "state": 7,
+                        "type": 3
+                    },
+                    {
+                        "AGE": "64",
+                        "GENDER": "M",
+                        "NAME": "David Lindsey",
+                        "ROOM_TEXT": "Spouse is MelissaLindsey.",
+                        "ROOM_TYPE": "2",
+                        "id": 58,
+                        "state": 8,
+                        "type": 1
+                    },
+                    {
+                        "AGE": "18",
+                        "GENDER": "F",
+                        "NAME": "Avery Tate",
+                        "ROOM_TEXT": "",
+                        "ROOM_TYPE": "3",
+                        "id": 59,
+                        "state": 9,
+                        "type": 3
+                    },
+                    {
+                        "AGE": "18",
+                        "GENDER": "F",
+                        "NAME": "Aubrey Leake",
+                        "ROOM_TEXT": "",
+                        "ROOM_TYPE": "3",
+                        "id": 60,
+                        "state": 9,
+                        "type": 3
+                    },
+                    {
+                        "AGE": "18",
+                        "GENDER": "F",
+                        "NAME": "Eron Hendrix",
+                        "ROOM_TEXT": "",
+                        "ROOM_TYPE": "3",
+                        "id": 61,
+                        "state": 9,
+                        "type": 3
+                    },
+                    {
+                        "AGE": "18",
+                        "GENDER": "F",
+                        "NAME": "Molly Billingsley",
+                        "ROOM_TEXT": "",
+                        "ROOM_TYPE": "3",
+                        "id": 62,
+                        "state": 10,
+                        "type": 3
+                    },
+                    {
+                        "AGE": "18",
+                        "GENDER": "F",
+                        "NAME": "Gabryale Adams",
+                        "ROOM_TEXT": "",
+                        "ROOM_TYPE": "3",
+                        "id": 63,
+                        "state": 10,
+                        "type": 3
+                    },
+                    {
+                        "AGE": "59",
+                        "GENDER": "F",
+                        "NAME": "Lisa Richardson",
+                        "ROOM_TEXT": "",
+                        "ROOM_TYPE": "3",
+                        "id": 64,
+                        "state": 10,
+                        "type": 3
+                    },
+                    {
+                        "AGE": "59",
+                        "GENDER": "F",
+                        "NAME": "Sheila Morton",
+                        "ROOM_TEXT": "tpl w/Lisa Richardson & Katie Schaefer",
+                        "ROOM_TYPE": "3",
+                        "id": 65,
+                        "state": 11,
+                        "type": 3
+                    },
+                    {
+                        "AGE": "41",
+                        "GENDER": "F",
+                        "NAME": "Katie Schaefer",
+                        "ROOM_TEXT": "",
+                        "ROOM_TYPE": "3",
+                        "id": 66,
+                        "state": 11,
+                        "type": 3
+                    }
+                ],
+                "city": "Sorrento",
+                "departureDate": "14-JUN-22",
+                "groupId": "111869",
+                "history": [
+                    {
+                        "creataAt": 1685818134336,
+                        "message": "Saved trip details for tripId <strong>0606/ITA/2</strong> by admin: admin"
+                    },
+                    {
+                        "card": {},
+                        "endState": "",
+                        "guest": {},
+                        "message": "",
+                        "startState": ""
+                    }
+                ],
+                "tripCode": "0606/ITA/2"
+            },
+            {
+                "arrivalDate": "14-JUN-22",
+                "boards": [
+                    {
+                        "accept": 3,
+                        "capacity": 1,
+                        "color": "danger",
+                        "guests": [
+                            {
+                                "AGE": "79",
+                                "BIRTH_DT": "05-Aug-42",
+                                "GENDER": "F",
+                                "GROUP_ID": "111869",
+                                "NAME": "Robbie Boyd",
+                                "PASSPORT_COUNTRY_OF_ISSUE": "US",
+                                "PASSPORT_NUMBER": "565089450",
+                                "PAXTYPE": "P",
+                                "PAX_ID": "23218",
+                                "PRODUCT_LINE": "H",
+                                "ROOM_ASSIGNMENT": "Unassigned",
+                                "ROOM_TEXT": "",
+                                "ROOM_TYPE": "1",
+                                "SALES_TEAM": "ROM"
+                            }
+                        ],
+                        "state": 0,
+                        "title": "Room 1-Single"
+                    },
+                    {
+                        "accept": 3,
+                        "capacity": 2,
+                        "color": "primary",
+                        "guests": [
+                            {
+                                "AGE": "39",
+                                "BIRTH_DT": "03-Dec-82",
+                                "GENDER": "F",
+                                "GROUP_ID": "111869",
+                                "NAME": "Anna Garner",
+                                "PASSPORT_COUNTRY_OF_ISSUE": "US",
+                                "PASSPORT_NUMBER": "A05384600",
+                                "PAXTYPE": "H",
+                                "PAX_ID": "2365",
+                                "PRODUCT_LINE": "H",
+                                "ROOM_ASSIGNMENT": "7",
+                                "ROOM_TEXT": "twin w/Stephanie Allen",
+                                "ROOM_TYPE": "2",
+                                "SALES_TEAM": "ROM"
+                            },
+                            {
+                                "AGE": "39",
+                                "BIRTH_DT": "26-Feb-83",
+                                "GENDER": "F",
+                                "GROUP_ID": "111869",
+                                "NAME": "Stephanie Allen",
+                                "PASSPORT_COUNTRY_OF_ISSUE": "",
+                                "PASSPORT_NUMBER": "",
+                                "PAXTYPE": "A",
+                                "PAX_ID": "11088",
+                                "PRODUCT_LINE": "H",
+                                "ROOM_ASSIGNMENT": "7",
+                                "ROOM_TEXT": "",
+                                "ROOM_TYPE": "2",
+                                "SALES_TEAM": "ROM"
+                            }
+                        ],
+                        "state": 1,
+                        "title": "Room 2-Double"
+                    },
+                    {
+                        "accept": 3,
+                        "capacity": 2,
+                        "color": "primary",
+                        "guests": [
+                            {
+                                "AGE": "65",
+                                "BIRTH_DT": "14-Aug-56",
+                                "GENDER": "F",
+                                "GROUP_ID": "111869",
+                                "NAME": "Barbara Jones",
+                                "PASSPORT_COUNTRY_OF_ISSUE": "US",
+                                "PASSPORT_NUMBER": "A02205849",
+                                "PAXTYPE": "P",
+                                "PAX_ID": "3006",
+                                "PRODUCT_LINE": "H",
+                                "ROOM_ASSIGNMENT": "5",
+                                "ROOM_TEXT": "Twin with ElizabethTidwell.",
+                                "ROOM_TYPE": "2",
+                                "SALES_TEAM": "ROM"
+                            },
+                            {
+                                "AGE": "60",
+                                "BIRTH_DT": "14-Feb-62",
+                                "GENDER": "F",
+                                "GROUP_ID": "111869",
+                                "NAME": "Mary Tidwell",
+                                "PASSPORT_COUNTRY_OF_ISSUE": "US",
+                                "PASSPORT_NUMBER": "512156447",
+                                "PAXTYPE": "P",
+                                "PAX_ID": "3038",
+                                "PRODUCT_LINE": "H",
+                                "ROOM_ASSIGNMENT": "5",
+                                "ROOM_TEXT": "Twin with BarbaraJones.",
+                                "ROOM_TYPE": "2",
+                                "SALES_TEAM": "ROM"
+                            }
+                        ],
+                        "state": 2,
+                        "title": "Room 3-Double"
+                    },
+                    {
+                        "accept": 3,
+                        "capacity": 2,
+                        "color": "primary",
+                        "guests": [
+                            {
+                                "AGE": "59",
+                                "BIRTH_DT": "03-Oct-62",
+                                "GENDER": "F",
+                                "GROUP_ID": "111869",
+                                "NAME": "Margaret Rowland",
+                                "PASSPORT_COUNTRY_OF_ISSUE": "US",
+                                "PASSPORT_NUMBER": "665099128",
+                                "PAXTYPE": "P",
+                                "PAX_ID": "8768",
+                                "PRODUCT_LINE": "H",
+                                "ROOM_ASSIGNMENT": "4",
+                                "ROOM_TEXT": "Twin with NinabethCapaning.",
+                                "ROOM_TYPE": "2",
+                                "SALES_TEAM": "ROM"
+                            },
+                            {
+                                "AGE": "58",
+                                "BIRTH_DT": "01-Sep-63",
+                                "GENDER": "F",
+                                "GROUP_ID": "111869",
+                                "NAME": "Ninabeth Capaning",
+                                "PASSPORT_COUNTRY_OF_ISSUE": "US",
+                                "PASSPORT_NUMBER": "652683667",
+                                "PAXTYPE": "P",
+                                "PAX_ID": "9877",
+                                "PRODUCT_LINE": "H",
+                                "ROOM_ASSIGNMENT": "4",
+                                "ROOM_TEXT": "Twin with MargaretRowland.",
+                                "ROOM_TYPE": "2",
+                                "SALES_TEAM": "ROM"
+                            }
+                        ],
+                        "state": 3,
+                        "title": "Room 4-Double"
+                    },
+                    {
+                        "accept": 3,
+                        "capacity": 2,
+                        "color": "primary",
+                        "guests": [
+                            {
+                                "AGE": "46",
+                                "BIRTH_DT": "04-May-76",
+                                "GENDER": "F",
+                                "GROUP_ID": "111869",
+                                "NAME": "Jennifer Mulrooney",
+                                "PASSPORT_COUNTRY_OF_ISSUE": "US",
+                                "PASSPORT_NUMBER": "548142003",
+                                "PAXTYPE": "P",
+                                "PAX_ID": "3168",
+                                "PRODUCT_LINE": "H",
+                                "ROOM_ASSIGNMENT": "3",
+                                "ROOM_TEXT": "Twin with RileyMulrooney.",
+                                "ROOM_TYPE": "2",
+                                "SALES_TEAM": "ROM"
+                            },
+                            {
+                                "AGE": "67",
+                                "BIRTH_DT": "24-Jan-55",
+                                "GENDER": "F",
+                                "GROUP_ID": "111869",
+                                "NAME": "Debra Scott",
+                                "PASSPORT_COUNTRY_OF_ISSUE": "US",
+                                "PASSPORT_NUMBER": "665165268",
+                                "PAXTYPE": "P",
+                                "PAX_ID": "2363",
+                                "PRODUCT_LINE": "H",
+                                "ROOM_ASSIGNMENT": "2",
+                                "ROOM_TEXT": "Spouse is JerryScott.",
+                                "ROOM_TYPE": "2",
+                                "SALES_TEAM": "ROM"
+                            }
+                        ],
+                        "state": 4,
+                        "title": "Room 5-Double"
+                    },
+                    {
+                        "accept": 1,
+                        "capacity": 2,
+                        "color": "primary",
+                        "guests": [
+                            {
+                                "AGE": "31",
+                                "BIRTH_DT": "25-Feb-91",
+                                "GENDER": "M",
+                                "GROUP_ID": "111869",
+                                "NAME": "Adam Guntharp",
+                                "PASSPORT_COUNTRY_OF_ISSUE": "US",
+                                "PASSPORT_NUMBER": "520351985",
+                                "PAXTYPE": "P",
+                                "PAX_ID": "2636",
+                                "PRODUCT_LINE": "H",
+                                "ROOM_ASSIGNMENT": "Unassigned",
+                                "ROOM_TEXT": "",
+                                "ROOM_TYPE": "2",
+                                "SALES_TEAM": "ROM"
+                            },
+                            {
+                                "AGE": "64",
+                                "BIRTH_DT": "15-Nov-57",
+                                "GENDER": "M",
+                                "GROUP_ID": "111869",
+                                "NAME": "Jerry Scott",
+                                "PASSPORT_COUNTRY_OF_ISSUE": "US",
+                                "PASSPORT_NUMBER": "665165267",
+                                "PAXTYPE": "P",
+                                "PAX_ID": "2362",
+                                "PRODUCT_LINE": "H",
+                                "ROOM_ASSIGNMENT": "2",
+                                "ROOM_TEXT": "Spouse is DebraScott.",
+                                "ROOM_TYPE": "2",
+                                "SALES_TEAM": "ROM"
+                            }
+                        ],
+                        "state": 5,
+                        "title": "Room 6-Double"
+                    },
+                    {
+                        "accept": 4,
+                        "capacity": 2,
+                        "color": "primary",
+                        "guests": [
+                            {
+                                "AGE": "17",
+                                "BIRTH_DT": "28-Jan-05",
+                                "GENDER": "F",
+                                "GROUP_ID": "111869",
+                                "NAME": "Riley Mulrooney",
+                                "PASSPORT_COUNTRY_OF_ISSUE": "US",
+                                "PASSPORT_NUMBER": "A02083841",
+                                "PAXTYPE": "P",
+                                "PAX_ID": "2629",
+                                "PRODUCT_LINE": "H",
+                                "ROOM_ASSIGNMENT": "3",
+                                "ROOM_TEXT": "Twin with JenniferMulrooney.",
+                                "ROOM_TYPE": "2",
+                                "SALES_TEAM": "ROM"
+                            }
+                        ],
+                        "state": 6,
+                        "title": "Room 7-Double"
+                    },
+                    {
+                        "accept": 3,
+                        "capacity": 2,
+                        "color": "primary",
+                        "guests": [
+                            {
+                                "AGE": "57",
+                                "BIRTH_DT": "06-Jul-64",
+                                "GENDER": "F",
+                                "GROUP_ID": "111869",
+                                "NAME": "Melissa Lindsey",
+                                "PASSPORT_COUNTRY_OF_ISSUE": "US",
+                                "PASSPORT_NUMBER": "673041851",
+                                "PAXTYPE": "P",
+                                "PAX_ID": "2635",
+                                "PRODUCT_LINE": "H",
+                                "ROOM_ASSIGNMENT": "1",
+                                "ROOM_TEXT": "Spouse is David KeithLindsey.",
+                                "ROOM_TYPE": "2",
+                                "SALES_TEAM": "ROM"
+                            }
+                        ],
+                        "state": 7,
+                        "title": "Room 8-Double"
+                    },
+                    {
+                        "accept": 1,
+                        "capacity": 2,
+                        "color": "primary",
+                        "guests": [
+                            {
+                                "AGE": "64",
+                                "BIRTH_DT": "24-Nov-57",
+                                "GENDER": "M",
+                                "GROUP_ID": "111869",
+                                "NAME": "David Lindsey",
+                                "PASSPORT_COUNTRY_OF_ISSUE": "US",
+                                "PASSPORT_NUMBER": "A01686924",
+                                "PAXTYPE": "A",
+                                "PAX_ID": "2760",
+                                "PRODUCT_LINE": "H",
+                                "ROOM_ASSIGNMENT": "1",
+                                "ROOM_TEXT": "Spouse is MelissaLindsey.",
+                                "ROOM_TYPE": "2",
+                                "SALES_TEAM": "ROM"
+                            }
+                        ],
+                        "state": 8,
+                        "title": "Room 9-Double"
+                    },
+                    {
+                        "accept": 3,
+                        "capacity": 3,
+                        "color": "warning",
+                        "guests": [
+                            {
+                                "AGE": "18",
+                                "BIRTH_DT": "24-Jul-03",
+                                "GENDER": "F",
+                                "GROUP_ID": "111869",
+                                "NAME": "Avery Tate",
+                                "PASSPORT_COUNTRY_OF_ISSUE": "US",
+                                "PASSPORT_NUMBER": "660798318",
+                                "PAXTYPE": "P",
+                                "PAX_ID": "2132",
+                                "PRODUCT_LINE": "H",
+                                "ROOM_ASSIGNMENT": "Unassigned",
+                                "ROOM_TEXT": "",
+                                "ROOM_TYPE": "3",
+                                "SALES_TEAM": "ROM"
+                            },
+                            {
+                                "AGE": "18",
+                                "BIRTH_DT": "04-May-04",
+                                "GENDER": "F",
+                                "GROUP_ID": "111869",
+                                "NAME": "Aubrey Leake",
+                                "PASSPORT_COUNTRY_OF_ISSUE": "US",
+                                "PASSPORT_NUMBER": "677565532",
+                                "PAXTYPE": "P",
+                                "PAX_ID": "14983",
+                                "PRODUCT_LINE": "H",
+                                "ROOM_ASSIGNMENT": "Unassigned",
+                                "ROOM_TEXT": "",
+                                "ROOM_TYPE": "3",
+                                "SALES_TEAM": "ROM"
+                            },
+                            {
+                                "AGE": "18",
+                                "BIRTH_DT": "20-Apr-04",
+                                "GENDER": "F",
+                                "GROUP_ID": "111869",
+                                "NAME": "Eron Hendrix",
+                                "PASSPORT_COUNTRY_OF_ISSUE": "US",
+                                "PASSPORT_NUMBER": "576047392",
+                                "PAXTYPE": "P",
+                                "PAX_ID": "17318",
+                                "PRODUCT_LINE": "H",
+                                "ROOM_ASSIGNMENT": "Unassigned",
+                                "ROOM_TEXT": "",
+                                "ROOM_TYPE": "3",
+                                "SALES_TEAM": "ROM"
+                            }
+                        ],
+                        "state": 9,
+                        "title": "Room 10-Triple"
+                    },
+                    {
+                        "accept": 3,
+                        "capacity": 3,
+                        "color": "warning",
+                        "guests": [
+                            {
+                                "AGE": "18",
+                                "BIRTH_DT": "06-Aug-03",
+                                "GENDER": "F",
+                                "GROUP_ID": "111869",
+                                "NAME": "Molly Billingsley",
+                                "PASSPORT_COUNTRY_OF_ISSUE": "US",
+                                "PASSPORT_NUMBER": "582834907",
+                                "PAXTYPE": "P",
+                                "PAX_ID": "2127",
+                                "PRODUCT_LINE": "H",
+                                "ROOM_ASSIGNMENT": "Unassigned",
+                                "ROOM_TEXT": "",
+                                "ROOM_TYPE": "3",
+                                "SALES_TEAM": "ROM"
+                            },
+                            {
+                                "AGE": "18",
+                                "BIRTH_DT": "22-Oct-03",
+                                "GENDER": "F",
+                                "GROUP_ID": "111869",
+                                "NAME": "Gabryale Adams",
+                                "PASSPORT_COUNTRY_OF_ISSUE": "US",
+                                "PASSPORT_NUMBER": "657006045",
+                                "PAXTYPE": "P",
+                                "PAX_ID": "2126",
+                                "PRODUCT_LINE": "H",
+                                "ROOM_ASSIGNMENT": "Unassigned",
+                                "ROOM_TEXT": "",
+                                "ROOM_TYPE": "3",
+                                "SALES_TEAM": "ROM"
+                            },
+                            {
+                                "AGE": "59",
+                                "BIRTH_DT": "07-Feb-63",
+                                "GENDER": "F",
+                                "GROUP_ID": "111869",
+                                "NAME": "Lisa Richardson",
+                                "PASSPORT_COUNTRY_OF_ISSUE": "US",
+                                "PASSPORT_NUMBER": "595576238",
+                                "PAXTYPE": "P",
+                                "PAX_ID": "2130",
+                                "PRODUCT_LINE": "H",
+                                "ROOM_ASSIGNMENT": "6",
+                                "ROOM_TEXT": "",
+                                "ROOM_TYPE": "3",
+                                "SALES_TEAM": "ROM"
+                            }
+                        ],
+                        "state": 10,
+                        "title": "Room 11-Triple"
+                    },
+                    {
+                        "accept": 3,
+                        "capacity": 3,
+                        "color": "warning",
+                        "guests": [
+                            {
+                                "AGE": "59",
+                                "BIRTH_DT": "24-Sep-62",
+                                "GENDER": "F",
+                                "GROUP_ID": "111869",
+                                "NAME": "Sheila Morton",
+                                "PASSPORT_COUNTRY_OF_ISSUE": "US",
+                                "PASSPORT_NUMBER": "667524263",
+                                "PAXTYPE": "P",
+                                "PAX_ID": "11006",
+                                "PRODUCT_LINE": "H",
+                                "ROOM_ASSIGNMENT": "6",
+                                "ROOM_TEXT": "tpl w/Lisa Richardson & Katie Schaefer",
+                                "ROOM_TYPE": "3",
+                                "SALES_TEAM": "ROM"
+                            },
+                            {
+                                "AGE": "41",
+                                "BIRTH_DT": "18-Apr-81",
+                                "GENDER": "F",
+                                "GROUP_ID": "111869",
+                                "NAME": "Katie Schaefer",
+                                "PASSPORT_COUNTRY_OF_ISSUE": "US",
+                                "PASSPORT_NUMBER": "659828167",
+                                "PAXTYPE": "P",
+                                "PAX_ID": "2131",
+                                "PRODUCT_LINE": "H",
+                                "ROOM_ASSIGNMENT": "6",
+                                "ROOM_TEXT": "",
+                                "ROOM_TYPE": "3",
+                                "SALES_TEAM": "ROM"
+                            }
+                        ],
+                        "state": 11,
+                        "title": "Room 12-Triple"
+                    },
+                    {
+                        "capacity": 10000,
+                        "color": "danger",
+                        "guests": [],
+                        "state": -1,
+                        "title": "Room Temporary"
+                    }
+                ],
+                "cards": [
+                    {
+                        "AGE": "79",
+                        "GENDER": "F",
+                        "NAME": "Robbie Boyd",
+                        "ROOM_TEXT": "",
+                        "ROOM_TYPE": "1",
+                        "id": 67,
+                        "state": 0,
+                        "type": 3
+                    },
+                    {
+                        "AGE": "39",
+                        "GENDER": "F",
+                        "NAME": "Anna Garner",
+                        "ROOM_TEXT": "twin w/Stephanie Allen",
+                        "ROOM_TYPE": "2",
+                        "id": 68,
+                        "state": 1,
+                        "type": 3
+                    },
+                    {
+                        "AGE": "39",
+                        "GENDER": "F",
+                        "NAME": "Stephanie Allen",
+                        "ROOM_TEXT": "",
+                        "ROOM_TYPE": "2",
+                        "id": 69,
+                        "state": 1,
+                        "type": 3
+                    },
+                    {
+                        "AGE": "65",
+                        "GENDER": "F",
+                        "NAME": "Barbara Jones",
+                        "ROOM_TEXT": "Twin with ElizabethTidwell.",
+                        "ROOM_TYPE": "2",
+                        "id": 70,
+                        "state": 2,
+                        "type": 3
+                    },
+                    {
+                        "AGE": "60",
+                        "GENDER": "F",
+                        "NAME": "Mary Tidwell",
+                        "ROOM_TEXT": "Twin with BarbaraJones.",
+                        "ROOM_TYPE": "2",
+                        "id": 71,
+                        "state": 2,
+                        "type": 3
+                    },
+                    {
+                        "AGE": "59",
+                        "GENDER": "F",
+                        "NAME": "Margaret Rowland",
+                        "ROOM_TEXT": "Twin with NinabethCapaning.",
+                        "ROOM_TYPE": "2",
+                        "id": 72,
+                        "state": 3,
+                        "type": 3
+                    },
+                    {
+                        "AGE": "58",
+                        "GENDER": "F",
+                        "NAME": "Ninabeth Capaning",
+                        "ROOM_TEXT": "Twin with MargaretRowland.",
+                        "ROOM_TYPE": "2",
+                        "id": 73,
+                        "state": 3,
+                        "type": 3
+                    },
+                    {
+                        "AGE": "46",
+                        "GENDER": "F",
+                        "NAME": "Jennifer Mulrooney",
+                        "ROOM_TEXT": "Twin with RileyMulrooney.",
+                        "ROOM_TYPE": "2",
+                        "id": 74,
+                        "state": 4,
+                        "type": 3
+                    },
+                    {
+                        "AGE": "67",
+                        "GENDER": "F",
+                        "NAME": "Debra Scott",
+                        "ROOM_TEXT": "Spouse is JerryScott.",
+                        "ROOM_TYPE": "2",
+                        "id": 75,
+                        "state": 4,
+                        "type": 3
+                    },
+                    {
+                        "AGE": "31",
+                        "GENDER": "M",
+                        "NAME": "Adam Guntharp",
+                        "ROOM_TEXT": "",
+                        "ROOM_TYPE": "2",
+                        "id": 76,
+                        "state": 5,
+                        "type": 1
+                    },
+                    {
+                        "AGE": "64",
+                        "GENDER": "M",
+                        "NAME": "Jerry Scott",
+                        "ROOM_TEXT": "Spouse is DebraScott.",
+                        "ROOM_TYPE": "2",
+                        "id": 77,
+                        "state": 5,
+                        "type": 1
+                    },
+                    {
+                        "AGE": "17",
+                        "GENDER": "F",
+                        "NAME": "Riley Mulrooney",
+                        "ROOM_TEXT": "Twin with JenniferMulrooney.",
+                        "ROOM_TYPE": "2",
+                        "id": 78,
+                        "state": 6,
+                        "type": 4
+                    },
+                    {
+                        "AGE": "57",
+                        "GENDER": "F",
+                        "NAME": "Melissa Lindsey",
+                        "ROOM_TEXT": "Spouse is David KeithLindsey.",
+                        "ROOM_TYPE": "2",
+                        "id": 79,
+                        "state": 7,
+                        "type": 3
+                    },
+                    {
+                        "AGE": "64",
+                        "GENDER": "M",
+                        "NAME": "David Lindsey",
+                        "ROOM_TEXT": "Spouse is MelissaLindsey.",
+                        "ROOM_TYPE": "2",
+                        "id": 80,
+                        "state": 8,
+                        "type": 1
+                    },
+                    {
+                        "AGE": "18",
+                        "GENDER": "F",
+                        "NAME": "Avery Tate",
+                        "ROOM_TEXT": "",
+                        "ROOM_TYPE": "3",
+                        "id": 81,
+                        "state": 9,
+                        "type": 3
+                    },
+                    {
+                        "AGE": "18",
+                        "GENDER": "F",
+                        "NAME": "Aubrey Leake",
+                        "ROOM_TEXT": "",
+                        "ROOM_TYPE": "3",
+                        "id": 82,
+                        "state": 9,
+                        "type": 3
+                    },
+                    {
+                        "AGE": "18",
+                        "GENDER": "F",
+                        "NAME": "Eron Hendrix",
+                        "ROOM_TEXT": "",
+                        "ROOM_TYPE": "3",
+                        "id": 83,
+                        "state": 9,
+                        "type": 3
+                    },
+                    {
+                        "AGE": "18",
+                        "GENDER": "F",
+                        "NAME": "Molly Billingsley",
+                        "ROOM_TEXT": "",
+                        "ROOM_TYPE": "3",
+                        "id": 84,
+                        "state": 10,
+                        "type": 3
+                    },
+                    {
+                        "AGE": "18",
+                        "GENDER": "F",
+                        "NAME": "Gabryale Adams",
+                        "ROOM_TEXT": "",
+                        "ROOM_TYPE": "3",
+                        "id": 85,
+                        "state": 10,
+                        "type": 3
+                    },
+                    {
+                        "AGE": "59",
+                        "GENDER": "F",
+                        "NAME": "Lisa Richardson",
+                        "ROOM_TEXT": "",
+                        "ROOM_TYPE": "3",
+                        "id": 86,
+                        "state": 10,
+                        "type": 3
+                    },
+                    {
+                        "AGE": "59",
+                        "GENDER": "F",
+                        "NAME": "Sheila Morton",
+                        "ROOM_TEXT": "tpl w/Lisa Richardson & Katie Schaefer",
+                        "ROOM_TYPE": "3",
+                        "id": 87,
+                        "state": 11,
+                        "type": 3
+                    },
+                    {
+                        "AGE": "41",
+                        "GENDER": "F",
+                        "NAME": "Katie Schaefer",
+                        "ROOM_TEXT": "",
+                        "ROOM_TYPE": "3",
+                        "id": 88,
+                        "state": 11,
+                        "type": 3
+                    }
+                ],
+                "city": "Rome",
+                "departureDate": "16-JUN-22",
+                "groupId": "111869",
+                "history": [
+                    {
+                        "creataAt": 1685818134336,
+                        "message": "Saved trip details for tripId <strong>0606/ITA/2</strong> by admin: admin"
+                    },
+                    {
+                        "card": {},
+                        "endState": "",
+                        "guest": {},
+                        "message": "",
+                        "startState": ""
+                    }
+                ],
+                "tripCode": "0606/ITA/2"
+            }
+        ],
+        "tripId": "0606/ITA/2",
+        "updatedDate": "2023-06-29T16:54:55.701699",
+        "version": "6"
+    }
+}

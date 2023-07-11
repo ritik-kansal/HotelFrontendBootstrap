@@ -1,29 +1,43 @@
+.container {
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .container .drop-targets {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .hide {
   display: none;
 }
 
-.item {
-  height: 200px;
-  width: 200px;
-  background-color: #ccc;
+.box_container {
+  width: 32%;
+  margin-bottom: 20px;
 }
 
-.box_container {
-  margin-right: 20px;
+.box_container.temp {
+  width: 250px;
+  margin-bottom: 20px;
+  position: absolute;
+  top: 100px;
+  left: 10px;
 }
 
 .box {
   border: 2px solid #ccc;
-  height: 250px;
-  width: 250px;
+  min-height: 150px;
   display: flex;
+  flex-direction: column;
+  gap: 10px;
   align-items: center;
   justify-content: center;
   border-radius: 0 0 5px 5px;
+  padding: 20px 8px;
+  background-color: #eee;
 }
 
 .box.drag-over {
@@ -40,14 +54,36 @@
   padding: 5px 10px;
 }
 
-.bg-red {
-  background-color: red;
+.item {
+  background-color: #ccc;
+  border-radius: 10px;
+  padding: 10px 5px;
+  width: 100%;
+}
+.item .name {
+  font-size: 20px;
+  text-align: center;
+}
+.item .properties {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 5px 10px;
 }
 
-.bg-green {
-  background-color: green;
+.item .properties .property {
+  min-width: 50%;
+  margin-bottom: 5px;
 }
 
-.bg-yellow {
-  background-color: yellow;
+.bg-danger {
+  background-color: #f14668;
+}
+
+.bg-primary {
+  background-color: #00d1b2;
+}
+
+.bg-warning {
+  background-color: #ffe08a;
 }

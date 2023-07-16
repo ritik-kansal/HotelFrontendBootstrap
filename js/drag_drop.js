@@ -97,13 +97,23 @@ class BoxContainer{
     BoxContainer.boxContainers.delete(id);
   }
 
+  static addNameChangetoHistory(location_id, old_name, new_name){
+    let page = Page.currentPage;
+    let message= `
+        <div>
+          Name for room <strong>${old_name}</strong> changed to <strong>${new_name}</strong>
+        </div>
+      `;
+    page.addHistoryByMessage(message, location_id);
+  }
+
   static editName(e) {
     const $name = $(e.currentTarget).siblings('.name');
     const box_container_id = $(e.currentTarget).closest('.box_container').attr('id');
     const box_container = BoxContainer.getBoxContainerById(box_container_id);
     
-    const text = box_container.name;
-    var $input = $('<input>').val(text);
+    const old_name = box_container.name;
+    var $input = $('<input>').val(old_name);
     $name.replaceWith($input);
     $input.focus();
     
@@ -111,6 +121,7 @@ class BoxContainer{
     $input.on('blur', function(e) {
       box_container.name = $input.val();
       box_container.updateBoxContainer();
+      BoxContainer.addNameChangetoHistory(box_container.location_id, old_name, box_container.name);
     });
 
     // add a keypress event listener
@@ -118,6 +129,7 @@ class BoxContainer{
       if (e.key === 'Enter') {  
         box_container.name = $input.val();
         box_container.updateBoxContainer();
+        BoxContainer.addNameChangetoHistory(box_container.location_id, old_name, box_container.name);
       }
     });
   }
@@ -185,15 +197,18 @@ class BoxContainer{
         
           src_box_container.removeGuestById(guest_id);
           des_box_container.addGuest(guest);
+
+          src_box_container.updateBoxContainer();
+          des_box_container.updateBoxContainer();
+
+          let message = `
+              <div>
+                Moved <strong>${guestName}</strong>(${guestAge}) from <strong>${src_box_container.name}</strong> to <strong>${des_box_container.name}</strong>
+              </div>
+            `;
           
-          let history_payload = {
-            "creataAt": Date.now(),
-            "message" : `Moved <strong>${guestName}</strong>(${guestAge}) from ${src_box_container.name} to ${  des_box_container.name}`,
-          } 
-  
-          let location = Location.getLocationById(des_box_container.location_id);
-          location.addHistoryByPayload(history_payload);
-          location.updateLocation();
+          let page = Page.currentPage;
+          page.addHistoryByMessage(message, src_box_container.location_id);
         }
         else{alert("Can not downgrade room type")}
       }
@@ -244,10 +259,9 @@ class BoxContainer{
 }
 
 class History{
-  constructor(payload,location_id){
+  constructor(payload){
     this.message = payload["message"];
     this.createdAt = new Date(payload["creataAt"]).toLocaleString();
-    this.location_id = location_id;
   }
 
   getHistoryLiteral(){
@@ -274,21 +288,13 @@ class Location{
     this.boxContainers = payload["boards"].map((room,index) => {
       return new BoxContainer(room,`${index}`, this.id);
     });
-    this.history = payload["history"].map(history => {
-      
-      return new History(history, this.id);
-    });
+ 
 
     Location.locations.set(this.id,this);
   }
 
   static getLocationById(id){
     return Location.locations.get(id);
-  }
-
-  addHistoryByPayload(history_payload){
-    let newHistory = new History(history_payload,this.id);
-    this.history.unshift(newHistory);
   }
 
   getBoxContainersLiteral(){
@@ -324,14 +330,7 @@ class Location{
             this.getBoxContainersLiteral()
           }
         </div>
-        <div class="history text-center">
-          <h2>History</h2>
-          <div class="history-list text-left">
-            ${
-              this.getHistorysLiteral()
-            }
-          </div>
-        </div>
+        
       </div>
     `
     return location_literal;
@@ -339,8 +338,8 @@ class Location{
 
   // add BoxContainer to location
   addBoxContainer(boxContainer_payload){
-    let boxContainer_id = this.boxContainers.length + 1;
-    let newBoxContainer = new BoxContainer(boxContainer_payload, this.id + "_" + boxContainer_id, this.location_id);
+    let boxContainer_id = this.boxContainers.length;
+    let newBoxContainer = new BoxContainer(boxContainer_payload, this.id + "_" + boxContainer_id, this.id);
     this.boxContainers.push(newBoxContainer);
   }
 
@@ -348,6 +347,15 @@ class Location{
   removeBoxContainer(boxContainer){
     BoxContainer.removeBoxContainerById(boxContainer.id);
     this.boxContainers = this.boxContainers.filter(b => b.id != boxContainer.id);
+
+    let page = Page.currentPage;
+    let message= `
+        <div>
+          <strong>${boxContainer.name}</strong> deleted.
+        </div>
+      `;
+
+    page.addHistoryByMessage(message, this.id);
   }
 
   moveAllGuestsToTemp = () => {
@@ -361,6 +369,16 @@ class Location{
         boxContainer.guests = [];
       }
     });
+
+
+    let page = Page.currentPage;
+    let message= `
+        <div>
+          All Guests moved to temporary room.
+        </div>
+      `;
+
+    page.addHistoryByMessage(message, this.id);
   };
   
   createNewBoxContainer = (capacity) => {
@@ -373,16 +391,108 @@ class Location{
         guests: [],
       }
     );
+
+    let page = Page.currentPage;
+    
+    let message=`
+        <div>
+          New Room Created. <br />Room Name: <strong>Room ${box_container_count}-${BoxContainer.getRoomType(capacity)}</strong>
+        </div>
+      `;
+
+    page.addHistoryByMessage(message, this.id);
   }
 
   updateLocation(){
     $(`#${this.id}`).replaceWith(this.getLocationLiteral());
-    attachMainButtons();
   }
 
   createLocation(){
     $(".container-fluid").append(this.getLocationLiteral());
-    attachMainButtons();
+  }
+}
+
+class Page{
+
+  static currentPage = null;
+
+  constructor(payload){
+    this.locations = payload.map((location,index) => {
+      return new Location(location,`${index}`);
+    });
+
+    // TODO: there will be common history for all locations
+    this.history = payload[0]["history"].map((history,index) => {
+      return new History(history);
+    });
+
+    Page.currentPage = this;
+  }
+
+  addHistoryByMessage(message, location_id){
+    let location = Location.getLocationById(location_id);
+    console.log(location, location_id);
+    let history_payload = {
+      message: `
+        ${message}
+        <div class="time">
+          Date Range: ${location.arrivalDate} to ${location.departureDate}
+        </div>
+      `,
+      createdAt: new Date().toLocaleString(),
+    };
+    this.addHistoryByPayload(history_payload);
+    this.updateHistory();
+  }
+  
+  getLocationsLiteral(){
+    let location_list = this.locations.map(location => location.getLocationLiteral()).join("");
+    return location_list;
+  }
+
+  getHistorysLiteral(){
+    let history_list = this.history.map(history => history.getHistoryLiteral()).join("");
+    return history_list;
+  }
+
+  addHistoryByPayload(payload){
+    let newHistory = new History(payload);
+    // add to top of history
+    this.history.unshift(newHistory);
+  }
+
+  updateHistory(){
+    let history_list = `
+      <div class="history-list text-left">
+        ${
+          this.getHistorysLiteral()
+        }
+      </div>
+    `;
+    $(".history-list").replaceWith(history_list);
+  }
+
+  getPageLiteral(){
+    let page_literal = `
+      <div class="locations">
+        ${
+          this.getLocationsLiteral()
+        }     
+        <div class="history text-center">
+          <h2>History</h2>
+          <div class="history-list text-left">
+            ${
+              this.getHistorysLiteral()
+            }
+          </div>
+        </div>
+      </div>
+    `
+    return page_literal;
+  }
+
+  createPage(){
+    $(".container-fluid").append(this.getPageLiteral());
   }
 }
 
@@ -404,31 +514,33 @@ const getData = async () => {
 
 const attachMainButtons = () => {
   // set global location id
-  $(`.moveToTemp`).click((event)=>{
+  $(document).on('click', '.moveToTemp', function(event) {
     var current = event.target;
     global_location_id = $(current).attr('location_id');
-
+  
     let location = Location.getLocationById(global_location_id);
     location.moveAllGuestsToTemp();
     location.updateLocation();
-  })
-  $(`.showAddRoomModal`).click((event)=>{
-    var current = event.target;
-    global_location_id = $(current).attr('location_id')
-    
-  })
-  $(`.showDeleteRoomModal`).click((event)=>{
+  });
+  
+  $(document).on('click', '.showAddRoomModal', function(event) {
     var current = event.target;
     global_location_id = $(current).attr('location_id');
-    
+  });
+  
+  $(document).on('click', '.showDeleteRoomModal', function(event) {
+    var current = event.target;
+    global_location_id = $(current).attr('location_id');
+  
     addRoomOptions("#deleteRoomSelect");
-  })
-  $(`.showAddGuestModal`).click((event)=>{
+  });
+  
+  $(document).on('click', '.showAddGuestModal', function(event) {
     var current = event.target;
     global_location_id = $(current).attr('location_id');
-    
+  
     addRoomOptions("#addGuestSelect");
-  })
+  });
 }
 
 const attachModalFunctions = () => {
@@ -549,6 +661,18 @@ const addGuestSubmit = async (e) => {
   
   box_container.addGuestByPayload(guest_payload);
   box_container.updateBoxContainer();
+
+  let page = Page.currentPage;
+  
+  let message = `
+      <div>
+        Guest Added: <br/>
+        Name: <strong>${guest_payload.NAME}</strong>(${guest_payload.AGE}) <br/>
+        Room: <strong>${box_container.name}</strong> <br/>
+      </div>
+    `;
+
+  page.addHistoryByMessage(message,box_container.location_id);
   
 
   // dismiss modal addGuestModal
@@ -580,12 +704,8 @@ const verifyDeleteRoom = () => {
 
 // create html elements from data
 const createElements = (data) => {
-  // clear drop-targets
-  let location = new Location(data["responseData"]["roomData"][0],"location_1");
-  location.createLocation();
-
-  let location2 = new Location(data["responseData"]["roomData"][1],"location_2");
-  location2.createLocation();
+  let page = new Page(data["responseData"]["roomData"]);
+  page.createPage();
 };
 
 // when document is ready
@@ -593,4 +713,5 @@ $(document).ready(async () => {
   let data = await getData();
   await createElements(data);
   attachModalFunctions();
+  attachMainButtons();
 });

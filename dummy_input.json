@@ -1,7 +1,7 @@
 {
     "responseData": {
         "createdDate": "2023-06-04T00:18:54.350786",
-        "isLocked": true,
+        "isLocked": false,
         "roomData": [
             {
                 "arrivalDate": "07-JUN-22",
@@ -53,31 +53,6 @@
                                 "SALES_TEAM": "ROM"
                             },
                             {
-                                "AGE": "39",
-                                "BIRTH_DT": "26-Feb-83",
-                                "GENDER": "F",
-                                "GROUP_ID": "111869",
-                                "NAME": "Stephanie Allen",
-                                "PASSPORT_COUNTRY_OF_ISSUE": "",
-                                "PASSPORT_NUMBER": "",
-                                "PAXTYPE": "A",
-                                "PAX_ID": "11088",
-                                "PRODUCT_LINE": "H",
-                                "ROOM_ASSIGNMENT": "7",
-                                "ROOM_TEXT": "",
-                                "ROOM_TYPE": "2",
-                                "SALES_TEAM": "ROM"
-                            }
-                        ],
-                        "state": 1,
-                        "title": "Room 2-Double"
-                    },
-                    {
-                        "accept": 3,
-                        "capacity": 2,
-                        "color": "primary",
-                        "guests": [
-                            {
                                 "AGE": "65",
                                 "BIRTH_DT": "14-Aug-56",
                                 "GENDER": "F",
@@ -92,7 +67,16 @@
                                 "ROOM_TEXT": "Twin with ElizabethTidwell.",
                                 "ROOM_TYPE": "2",
                                 "SALES_TEAM": "ROM"
-                            },
+                            }
+                        ],
+                        "state": 1,
+                        "title": "Room 2-Double"
+                    },
+                    {
+                        "accept": 3,
+                        "capacity": 2,
+                        "color": "primary",
+                        "guests": [
                             {
                                 "AGE": "60",
                                 "BIRTH_DT": "14-Feb-62",
@@ -106,6 +90,22 @@
                                 "PRODUCT_LINE": "H",
                                 "ROOM_ASSIGNMENT": "5",
                                 "ROOM_TEXT": "Twin with BarbaraJones.",
+                                "ROOM_TYPE": "2",
+                                "SALES_TEAM": "ROM"
+                            },
+                            {
+                                "AGE": "39",
+                                "BIRTH_DT": "26-Feb-83",
+                                "GENDER": "F",
+                                "GROUP_ID": "111869",
+                                "NAME": "Stephanie Allen",
+                                "PASSPORT_COUNTRY_OF_ISSUE": "",
+                                "PASSPORT_NUMBER": "",
+                                "PAXTYPE": "A",
+                                "PAX_ID": "11088",
+                                "PRODUCT_LINE": "H",
+                                "ROOM_ASSIGNMENT": "7",
+                                "ROOM_TEXT": "",
                                 "ROOM_TYPE": "2",
                                 "SALES_TEAM": "ROM"
                             }
@@ -496,26 +496,6 @@
                         "type": 3
                     },
                     {
-                        "AGE": "39",
-                        "GENDER": "F",
-                        "NAME": "Stephanie Allen",
-                        "ROOM_TEXT": "",
-                        "ROOM_TYPE": "2",
-                        "id": 3,
-                        "state": 1,
-                        "type": 3
-                    },
-                    {
-                        "AGE": "65",
-                        "GENDER": "F",
-                        "NAME": "Barbara Jones",
-                        "ROOM_TEXT": "Twin with ElizabethTidwell.",
-                        "ROOM_TYPE": "2",
-                        "id": 4,
-                        "state": 2,
-                        "type": 3
-                    },
-                    {
                         "AGE": "60",
                         "GENDER": "F",
                         "NAME": "Mary Tidwell",
@@ -694,6 +674,26 @@
                         "id": 22,
                         "state": 11,
                         "type": 3
+                    },
+                    {
+                        "AGE": "65",
+                        "GENDER": "F",
+                        "NAME": "Barbara Jones",
+                        "ROOM_TEXT": "Twin with ElizabethTidwell.",
+                        "ROOM_TYPE": "2",
+                        "id": 4,
+                        "state": 1,
+                        "type": 3
+                    },
+                    {
+                        "AGE": "39",
+                        "GENDER": "F",
+                        "NAME": "Stephanie Allen",
+                        "ROOM_TEXT": "",
+                        "ROOM_TYPE": "2",
+                        "id": 3,
+                        "state": 2,
+                        "type": 3
                     }
                 ],
                 "city": "Venice",
@@ -701,15 +701,81 @@
                 "groupId": "111869",
                 "history": [
                     {
-                        "creataAt": 1685818134336,
-                        "message": "Saved trip details for tripId <strong>0606/ITA/2</strong> by admin: admin"
+                        "creataAt": 1689432085647,
+                        "message": "Updated trip details for tripId <strong>0606/ITA/2</strong> by admin: admin"
                     },
                     {
-                        "card": {},
-                        "endState": "",
-                        "guest": {},
-                        "message": "",
-                        "startState": ""
+                        "cardId": 3,
+                        "creataAt": 1689432083734,
+                        "endState": 2,
+                        "guest": {
+                            "AGE": "39",
+                            "BIRTH_DT": "26-Feb-83",
+                            "GENDER": "F",
+                            "GROUP_ID": "111869",
+                            "NAME": "Stephanie Allen",
+                            "PASSPORT_COUNTRY_OF_ISSUE": "",
+                            "PASSPORT_NUMBER": "",
+                            "PAXTYPE": "A",
+                            "PAX_ID": "11088",
+                            "PRODUCT_LINE": "H",
+                            "ROOM_ASSIGNMENT": "7",
+                            "ROOM_TEXT": "",
+                            "ROOM_TYPE": "2",
+                            "SALES_TEAM": "ROM"
+                        },
+                        "message": "Moved <strong>Stephanie Allen</strong>(39 Age, F) from <strong>Room Temporary</strong> to <strong>Room 3-Double</strong> by admin: admin for groupId: 111869 and date Range 07-JUN-22 - 09-JUN-22",
+                        "startState": -1
+                    },
+                    {
+                        "cardId": 4,
+                        "creataAt": 1689432082699,
+                        "endState": 1,
+                        "guest": {
+                            "AGE": "65",
+                            "BIRTH_DT": "14-Aug-56",
+                            "GENDER": "F",
+                            "GROUP_ID": "111869",
+                            "NAME": "Barbara Jones",
+                            "PASSPORT_COUNTRY_OF_ISSUE": "US",
+                            "PASSPORT_NUMBER": "A02205849",
+                            "PAXTYPE": "P",
+                            "PAX_ID": "3006",
+                            "PRODUCT_LINE": "H",
+                            "ROOM_ASSIGNMENT": "5",
+                            "ROOM_TEXT": "Twin with ElizabethTidwell.",
+                            "ROOM_TYPE": "2",
+                            "SALES_TEAM": "ROM"
+                        },
+                        "message": "Moved <strong>Barbara Jones</strong>(65 Age, F) from <strong>Room 3-Double</strong> to <strong>Room 2-Double</strong> by admin: admin for groupId: 111869 and date Range 07-JUN-22 - 09-JUN-22",
+                        "startState": 2
+                    },
+                    {
+                        "cardId": 3,
+                        "creataAt": 1689432081771,
+                        "endState": -1,
+                        "guest": {
+                            "AGE": "39",
+                            "BIRTH_DT": "26-Feb-83",
+                            "GENDER": "F",
+                            "GROUP_ID": "111869",
+                            "NAME": "Stephanie Allen",
+                            "PASSPORT_COUNTRY_OF_ISSUE": "",
+                            "PASSPORT_NUMBER": "",
+                            "PAXTYPE": "A",
+                            "PAX_ID": "11088",
+                            "PRODUCT_LINE": "H",
+                            "ROOM_ASSIGNMENT": "7",
+                            "ROOM_TEXT": "",
+                            "ROOM_TYPE": "2",
+                            "SALES_TEAM": "ROM"
+                        },
+                        "message": "Moved <strong>Stephanie Allen</strong>(39 Age, F) from <strong>Room 2-Double</strong> to <strong>Room Temporary</strong> by admin: admin for groupId: 111869 and date Range 07-JUN-22 - 09-JUN-22",
+                        "startState": 1
+                    },
+                    {
+                        "creataAt": 1685818134336,
+                        "message": "Saved trip details for tripId <strong>0606/ITA/2</strong> by admin: admin"
                     }
                 ],
                 "tripCode": "0606/ITA/2"
@@ -1411,6 +1477,79 @@
                 "departureDate": "12-JUN-22",
                 "groupId": "111869",
                 "history": [
+                    {
+                        "creataAt": 1689432085647,
+                        "message": "Updated trip details for tripId <strong>0606/ITA/2</strong> by admin: admin"
+                    },
+                    {
+                        "cardId": 3,
+                        "creataAt": 1689432083734,
+                        "endState": 2,
+                        "guest": {
+                            "AGE": "39",
+                            "BIRTH_DT": "26-Feb-83",
+                            "GENDER": "F",
+                            "GROUP_ID": "111869",
+                            "NAME": "Stephanie Allen",
+                            "PASSPORT_COUNTRY_OF_ISSUE": "",
+                            "PASSPORT_NUMBER": "",
+                            "PAXTYPE": "A",
+                            "PAX_ID": "11088",
+                            "PRODUCT_LINE": "H",
+                            "ROOM_ASSIGNMENT": "7",
+                            "ROOM_TEXT": "",
+                            "ROOM_TYPE": "2",
+                            "SALES_TEAM": "ROM"
+                        },
+                        "message": "Moved <strong>Stephanie Allen</strong>(39 Age, F) from <strong>Room Temporary</strong> to <strong>Room 3-Double</strong> by admin: admin for groupId: 111869 and date Range 07-JUN-22 - 09-JUN-22",
+                        "startState": -1
+                    },
+                    {
+                        "cardId": 4,
+                        "creataAt": 1689432082699,
+                        "endState": 1,
+                        "guest": {
+                            "AGE": "65",
+                            "BIRTH_DT": "14-Aug-56",
+                            "GENDER": "F",
+                            "GROUP_ID": "111869",
+                            "NAME": "Barbara Jones",
+                            "PASSPORT_COUNTRY_OF_ISSUE": "US",
+                            "PASSPORT_NUMBER": "A02205849",
+                            "PAXTYPE": "P",
+                            "PAX_ID": "3006",
+                            "PRODUCT_LINE": "H",
+                            "ROOM_ASSIGNMENT": "5",
+                            "ROOM_TEXT": "Twin with ElizabethTidwell.",
+                            "ROOM_TYPE": "2",
+                            "SALES_TEAM": "ROM"
+                        },
+                        "message": "Moved <strong>Barbara Jones</strong>(65 Age, F) from <strong>Room 3-Double</strong> to <strong>Room 2-Double</strong> by admin: admin for groupId: 111869 and date Range 07-JUN-22 - 09-JUN-22",
+                        "startState": 2
+                    },
+                    {
+                        "cardId": 3,
+                        "creataAt": 1689432081771,
+                        "endState": -1,
+                        "guest": {
+                            "AGE": "39",
+                            "BIRTH_DT": "26-Feb-83",
+                            "GENDER": "F",
+                            "GROUP_ID": "111869",
+                            "NAME": "Stephanie Allen",
+                            "PASSPORT_COUNTRY_OF_ISSUE": "",
+                            "PASSPORT_NUMBER": "",
+                            "PAXTYPE": "A",
+                            "PAX_ID": "11088",
+                            "PRODUCT_LINE": "H",
+                            "ROOM_ASSIGNMENT": "7",
+                            "ROOM_TEXT": "",
+                            "ROOM_TYPE": "2",
+                            "SALES_TEAM": "ROM"
+                        },
+                        "message": "Moved <strong>Stephanie Allen</strong>(39 Age, F) from <strong>Room 2-Double</strong> to <strong>Room Temporary</strong> by admin: admin for groupId: 111869 and date Range 07-JUN-22 - 09-JUN-22",
+                        "startState": 1
+                    },
                     {
                         "creataAt": 1685818134336,
                         "message": "Saved trip details for tripId <strong>0606/ITA/2</strong> by admin: admin"
@@ -2123,6 +2262,79 @@
                 "groupId": "111869",
                 "history": [
                     {
+                        "creataAt": 1689432085647,
+                        "message": "Updated trip details for tripId <strong>0606/ITA/2</strong> by admin: admin"
+                    },
+                    {
+                        "cardId": 3,
+                        "creataAt": 1689432083734,
+                        "endState": 2,
+                        "guest": {
+                            "AGE": "39",
+                            "BIRTH_DT": "26-Feb-83",
+                            "GENDER": "F",
+                            "GROUP_ID": "111869",
+                            "NAME": "Stephanie Allen",
+                            "PASSPORT_COUNTRY_OF_ISSUE": "",
+                            "PASSPORT_NUMBER": "",
+                            "PAXTYPE": "A",
+                            "PAX_ID": "11088",
+                            "PRODUCT_LINE": "H",
+                            "ROOM_ASSIGNMENT": "7",
+                            "ROOM_TEXT": "",
+                            "ROOM_TYPE": "2",
+                            "SALES_TEAM": "ROM"
+                        },
+                        "message": "Moved <strong>Stephanie Allen</strong>(39 Age, F) from <strong>Room Temporary</strong> to <strong>Room 3-Double</strong> by admin: admin for groupId: 111869 and date Range 07-JUN-22 - 09-JUN-22",
+                        "startState": -1
+                    },
+                    {
+                        "cardId": 4,
+                        "creataAt": 1689432082699,
+                        "endState": 1,
+                        "guest": {
+                            "AGE": "65",
+                            "BIRTH_DT": "14-Aug-56",
+                            "GENDER": "F",
+                            "GROUP_ID": "111869",
+                            "NAME": "Barbara Jones",
+                            "PASSPORT_COUNTRY_OF_ISSUE": "US",
+                            "PASSPORT_NUMBER": "A02205849",
+                            "PAXTYPE": "P",
+                            "PAX_ID": "3006",
+                            "PRODUCT_LINE": "H",
+                            "ROOM_ASSIGNMENT": "5",
+                            "ROOM_TEXT": "Twin with ElizabethTidwell.",
+                            "ROOM_TYPE": "2",
+                            "SALES_TEAM": "ROM"
+                        },
+                        "message": "Moved <strong>Barbara Jones</strong>(65 Age, F) from <strong>Room 3-Double</strong> to <strong>Room 2-Double</strong> by admin: admin for groupId: 111869 and date Range 07-JUN-22 - 09-JUN-22",
+                        "startState": 2
+                    },
+                    {
+                        "cardId": 3,
+                        "creataAt": 1689432081771,
+                        "endState": -1,
+                        "guest": {
+                            "AGE": "39",
+                            "BIRTH_DT": "26-Feb-83",
+                            "GENDER": "F",
+                            "GROUP_ID": "111869",
+                            "NAME": "Stephanie Allen",
+                            "PASSPORT_COUNTRY_OF_ISSUE": "",
+                            "PASSPORT_NUMBER": "",
+                            "PAXTYPE": "A",
+                            "PAX_ID": "11088",
+                            "PRODUCT_LINE": "H",
+                            "ROOM_ASSIGNMENT": "7",
+                            "ROOM_TEXT": "",
+                            "ROOM_TYPE": "2",
+                            "SALES_TEAM": "ROM"
+                        },
+                        "message": "Moved <strong>Stephanie Allen</strong>(39 Age, F) from <strong>Room 2-Double</strong> to <strong>Room Temporary</strong> by admin: admin for groupId: 111869 and date Range 07-JUN-22 - 09-JUN-22",
+                        "startState": 1
+                    },
+                    {
                         "creataAt": 1685818134336,
                         "message": "Saved trip details for tripId <strong>0606/ITA/2</strong> by admin: admin"
                     },
@@ -2834,6 +3046,79 @@
                 "groupId": "111869",
                 "history": [
                     {
+                        "creataAt": 1689432085647,
+                        "message": "Updated trip details for tripId <strong>0606/ITA/2</strong> by admin: admin"
+                    },
+                    {
+                        "cardId": 3,
+                        "creataAt": 1689432083734,
+                        "endState": 2,
+                        "guest": {
+                            "AGE": "39",
+                            "BIRTH_DT": "26-Feb-83",
+                            "GENDER": "F",
+                            "GROUP_ID": "111869",
+                            "NAME": "Stephanie Allen",
+                            "PASSPORT_COUNTRY_OF_ISSUE": "",
+                            "PASSPORT_NUMBER": "",
+                            "PAXTYPE": "A",
+                            "PAX_ID": "11088",
+                            "PRODUCT_LINE": "H",
+                            "ROOM_ASSIGNMENT": "7",
+                            "ROOM_TEXT": "",
+                            "ROOM_TYPE": "2",
+                            "SALES_TEAM": "ROM"
+                        },
+                        "message": "Moved <strong>Stephanie Allen</strong>(39 Age, F) from <strong>Room Temporary</strong> to <strong>Room 3-Double</strong> by admin: admin for groupId: 111869 and date Range 07-JUN-22 - 09-JUN-22",
+                        "startState": -1
+                    },
+                    {
+                        "cardId": 4,
+                        "creataAt": 1689432082699,
+                        "endState": 1,
+                        "guest": {
+                            "AGE": "65",
+                            "BIRTH_DT": "14-Aug-56",
+                            "GENDER": "F",
+                            "GROUP_ID": "111869",
+                            "NAME": "Barbara Jones",
+                            "PASSPORT_COUNTRY_OF_ISSUE": "US",
+                            "PASSPORT_NUMBER": "A02205849",
+                            "PAXTYPE": "P",
+                            "PAX_ID": "3006",
+                            "PRODUCT_LINE": "H",
+                            "ROOM_ASSIGNMENT": "5",
+                            "ROOM_TEXT": "Twin with ElizabethTidwell.",
+                            "ROOM_TYPE": "2",
+                            "SALES_TEAM": "ROM"
+                        },
+                        "message": "Moved <strong>Barbara Jones</strong>(65 Age, F) from <strong>Room 3-Double</strong> to <strong>Room 2-Double</strong> by admin: admin for groupId: 111869 and date Range 07-JUN-22 - 09-JUN-22",
+                        "startState": 2
+                    },
+                    {
+                        "cardId": 3,
+                        "creataAt": 1689432081771,
+                        "endState": -1,
+                        "guest": {
+                            "AGE": "39",
+                            "BIRTH_DT": "26-Feb-83",
+                            "GENDER": "F",
+                            "GROUP_ID": "111869",
+                            "NAME": "Stephanie Allen",
+                            "PASSPORT_COUNTRY_OF_ISSUE": "",
+                            "PASSPORT_NUMBER": "",
+                            "PAXTYPE": "A",
+                            "PAX_ID": "11088",
+                            "PRODUCT_LINE": "H",
+                            "ROOM_ASSIGNMENT": "7",
+                            "ROOM_TEXT": "",
+                            "ROOM_TYPE": "2",
+                            "SALES_TEAM": "ROM"
+                        },
+                        "message": "Moved <strong>Stephanie Allen</strong>(39 Age, F) from <strong>Room 2-Double</strong> to <strong>Room Temporary</strong> by admin: admin for groupId: 111869 and date Range 07-JUN-22 - 09-JUN-22",
+                        "startState": 1
+                    },
+                    {
                         "creataAt": 1685818134336,
                         "message": "Saved trip details for tripId <strong>0606/ITA/2</strong> by admin: admin"
                     },
@@ -2849,7 +3134,7 @@
             }
         ],
         "tripId": "0606/ITA/2",
-        "updatedDate": "2023-06-29T16:54:55.701699",
-        "version": "6"
+        "updatedDate": "2023-07-15T14:41:26.768776",
+        "version": "8"
     }
 }

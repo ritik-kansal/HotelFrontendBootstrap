@@ -1,10 +1,26 @@
-.container {
+*,body{
+  margin: 0;
+  padding: 0;
+}
+
+.location{
+  position: relative;
+  border-top: 1px solid #ccc;
+}
+
+.location_properties{
+  width: max-content;
+  margin: 0 auto;
+}
+
+.gap-10{
+  gap: 10px;
+}
+
+.container-fluid .drop-targets {
   max-width: 720px;
   margin-left: auto;
   margin-right: auto;
-}
-
-.container .drop-targets {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -23,8 +39,10 @@
   width: 250px;
   margin-bottom: 20px;
   position: absolute;
-  top: 100px;
-  left: 10px;
+  top: 255px;
+  left: 0px;
+  overflow: auto;
+  bottom: 0;
 }
 
 .box {
@@ -86,4 +104,31 @@
 
 .bg-warning {
   background-color: #ffe08a !important;
+}
+.history {
+  min-width: 260px;
+  width: 260px;
+  overflow: auto;
+  background: rgb(234, 238, 238);
+  padding-top: 16px;
+  z-index: 3;
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+}
+.history-block{
+  padding: 10px;
+  font-size: 14px;  
+  border-bottom: 1px solid #ccc;
+}
+
+.history-block:first-child{
+  border-top: 1px solid #ccc;
+}
+
+.history-block .time{
+  font-size: 12px;
+  margin-top: 5px;
+  color: #666;
 }

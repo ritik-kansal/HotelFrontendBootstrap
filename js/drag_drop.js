@@ -49,17 +49,16 @@ class Guest{
 
   getGuestLiteral(){
     return `
-      <div class="item bg-${this.color}" id="${this.id}" draggable="true" ondragstart="Guest.dragStart(event)" ondragend="Guest.dragEnd(event)">
-        <div class="name">${this.name}</div>
+      <div class="item bg-white rounded-sm" id="${this.id}" draggable="true" ondragstart="Guest.dragStart(event)" ondragend="Guest.dragEnd(event)">
+        <div class="name ml-2">${this.name}</div>
         <div class="properties">
-          ${this.keys.map(key => {
-            
-            let value = this[key];
-            if(value){
-              return `<div class="property" key="${key}" value="${value}">${key}: ${value}</div>`;
-            }
-          }
-          ).join("")}
+          <div class="d-flex justify-between">
+            <div class="" key="age" value="${this['age']}">Age: ${this['age']}</div>
+            <div class="ml-4" key="gender" value="${this['gender']}">Gender: ${this['gender']}</div>
+          </div>
+          <div class="bg-${this.getColor(this['room_type'])} px-4 py-1 rounded-pill">
+            <div class="text-white" key="room_type" value="${this['room_type']}">${BoxContainer.getRoomType(this['room_type'])}</div>
+          </div>
         </div>
       </div>
     `;
@@ -77,6 +76,7 @@ class BoxContainer{
     this.capacity = payload["capacity"];
     this.color = payload["color"];
     this.location_id = location_id;
+    this.areGuestsHidden = false;
     
     let guest_id = id; // Counter variable for guest IDs
     
@@ -132,6 +132,13 @@ class BoxContainer{
         BoxContainer.addNameChangetoHistory(box_container.location_id, old_name, box_container.name);
       }
     });
+  }
+
+  static toggleHideGuests(e){
+    const box_container_id = $(e.currentTarget).closest('.box_container').attr('id');
+    const box_container = BoxContainer.getBoxContainerById(box_container_id);
+    box_container.areGuestsHidden = !box_container.areGuestsHidden;
+    box_container.updateBoxContainer();
   }
 
   static getRoomType = (capacity) => {
@@ -241,18 +248,42 @@ class BoxContainer{
   }
 
   getBoxContainerLiteral(){
-  
     return `
-      <div id="${this.id}" class="box_container ${this.name == "Room Temporary" ? " temp" : ""}">
-        <div class="box_name bg-${this.color}" color="${this.color}">
-          <div class="close">^</div>
-          <div class="name">${this.name}</div>
-          <div class="edit" onclick="BoxContainer.editName(event)">Edit</div>
-        </div>
-
-        <div class="box" capacity="${this.capacity}" ondrop="BoxContainer.drop(event)" ondragover="BoxContainer.dragOver(event)" ondragenter="BoxContainer.dragEnter(event)" ondragleave="BoxContainer.dragLeave(event)">
-          ${this.guests.map(guest => guest.getGuestLiteral()).join("")}
-        </div>
+      <div id="${this.id}" class="box_container ${this.name == "Room Temporary" ? 'temp' : ''}">
+        ${
+          this.name == "Room Temporary" ?
+          ''
+          :
+          `
+          <div class="box_name bg-${this.color}" color="${this.color}">
+            <div>
+              <div class="edit d-inline-block" onclick="BoxContainer.editName(event)">
+                <img src="../assets/img/bed.svg" />
+              </div>
+              <div class="name d-inline-block ml-3">${this.name}</div>
+            </div>
+            <div onclick="BoxContainer.toggleHideGuests(event)" class="pointer">
+              ${
+                this.areGuestsHidden ?
+                `<img src="../assets/img/arrow_up.svg" />`
+                :
+                `<img src="../assets/img/arrow_down.svg" />`
+              }
+            </div>
+          </div>
+          `
+        }
+        
+        ${
+          this.areGuestsHidden ?
+            `<div></div>`
+          :
+          `
+            <div class="box" capacity="${this.capacity}" ondrop="BoxContainer.drop(event)" ondragover="BoxContainer.dragOver(event)" ondragenter="BoxContainer.dragEnter(event)" ondragleave="BoxContainer.dragLeave(event)">
+              ${this.guests.map(guest => guest.getGuestLiteral()).join("")}
+            </div>
+          `
+        }
       </div>
     `;
   }
@@ -285,7 +316,23 @@ class Location{
     this.departureDate = payload["departureDate"];
     this.groupId = payload["groupId"];
     this.tripCode = payload["tripCode"];
+    this.totalPaxCount = 0;
+    this.singleRoomCount = 0;
+    this.doubleRoomCount = 0;
+    this.tripleRoomCount = 0;
     this.boxContainers = payload["boards"].map((room,index) => {
+      this.totalPaxCount += room["guests"].length;
+      
+      if(room["capacity"] == 1){
+        this.singleRoomCount += 1;
+      }
+      else if(room["capacity"] == 2){
+        this.doubleRoomCount += 1;
+      }
+      else if(room["capacity"] == 3){
+        this.tripleRoomCount += 1;
+      }
+
       return new BoxContainer(room,`${index}`, this.id);
     });
  
@@ -297,9 +344,47 @@ class Location{
     return Location.locations.get(id);
   }
 
+  static toggleAllGuests(e){
+    console.log("here");
+    const location_id = $(e.currentTarget).closest('.location').attr('id');
+    const location = Location.getLocationById(location_id);
+    location.boxContainers.forEach(boxContainer => {
+      if(boxContainer.name != "Room Temporary")
+      {
+
+      boxContainer.areGuestsHidden = !boxContainer.areGuestsHidden;
+      boxContainer.updateBoxContainer();
+      }
+    });
+  }
+
   getBoxContainersLiteral(){
-    let rooming_list = this.boxContainers.map(boxContainer => boxContainer.getBoxContainerLiteral()).join("");
-    return rooming_list;
+    let literal = "";
+    let tempRoom = null;
+    let rooming_list = this.boxContainers.map(boxContainer => {
+      if(boxContainer.name != "Room Temporary"){
+        return boxContainer.getBoxContainerLiteral()
+      }
+      else{
+        tempRoom = boxContainer;
+      }
+    }).join("");
+    literal = `
+      <div class="w-100">
+        <div class="font-weight-bold mb-2 text-uppercase"> Participants </div>
+        <div class='position-relative w-100 h-100'>
+          ${tempRoom.getBoxContainerLiteral()}
+        </div>
+      </div>
+      <div class="w-100">
+      <div  class="d-flex mb-2 justify-content-between"> 
+        <div class="font-weight-bold text-uppercase"> Rooms </div>
+        <div class="pointer link-color border-link" onclick="Location.toggleAllGuests(event)"> Toggle All </div>
+      </div>
+        ${rooming_list}
+      </div>
+    `
+    return literal;
   }
 
   getHistorysLiteral(){
@@ -307,17 +392,18 @@ class Location{
     return history_list;
   }
 
+  // <div class="location_properties ">
+  // <div class="name">City Name: ${this.name}</div>
+  // <div class="arrivalDate">Arrival Date: ${this.arrivalDate}</div>
+  // <div class="departureDate">Departure Date: ${this.departureDate}</div>
+  // <div class="groupId">Group Id: ${this.groupId}</div>
+  // <div class="tripCode">Trip Code: ${this.tripCode}</div>
+  // </div>
   getLocationLiteral() {
     let location_literal = `
       <div id="${this.id}" class="location">
         
-        <div class="location_properties">
-          <div class="name">City Name: ${this.name}</div>
-          <div class="arrivalDate">Arrival Date: ${this.arrivalDate}</div>
-          <div class="departureDate">Departure Date: ${this.departureDate}</div>
-          <div class="groupId">Group Id: ${this.groupId}</div>
-          <div class="tripCode">Trip Code: ${this.tripCode}</div>
-        </div>
+        
         
         <div class="my-5 d-flex justify-content-center align-items-center gap-10">
           <button class="btn btn-primary moveToTemp" location_id="${this.id}">Move to temp</button>
@@ -325,10 +411,23 @@ class Location{
           <button class="btn btn-primary showDeleteRoomModal" location_id="${this.id}" data-toggle="modal" data-target="#deleteRoomModal" >Delete Room</button>
           <button class="btn btn-primary showAddGuestModal" location_id="${this.id}" data-toggle="modal" data-target="#addGuestModal" >Add Guest</button>
         </div>
-        <div class="drop-targets">
-          ${
-            this.getBoxContainersLiteral()
-          }
+
+        <div class="container">
+          <div class="d-flex align-items-center gap-10 mb-3">
+            <div class="">ROOM COUNT: <span class="font-weight-bold">${this.boxContainers.length}</span></div>
+            <div class="">TOTAL PAX COUNT: <span class="font-weight-bold">${this.totalPaxCount}</span></div>
+            <div class="d-flex">
+              <div class="bg-danger text-white rounded-pill px-3 py-2 mr-1">SINGLE: ${this.singleRoomCount}</div>
+              <div class="bg-primary text-white rounded-pill px-3 py-2 mr-1">DOUBLE: ${this.doubleRoomCount}</div>
+              <div class="bg-warning text-white rounded-pill px-3 py-2 mr-1">TRIPLE: ${this.tripleRoomCount}</div>
+            </div>
+          </div>
+
+          <div class="drop-targets">
+            ${
+              this.getBoxContainersLiteral()
+            }
+          </div>
         </div>
         
       </div>
@@ -478,18 +577,20 @@ class Page{
         ${
           this.getLocationsLiteral()
         }     
-        <div class="history text-center">
-          <h2>History</h2>
-          <div class="history-list text-left">
-            ${
-              this.getHistorysLiteral()
-            }
-          </div>
-        </div>
       </div>
     `
     return page_literal;
   }
+
+  // TODO: commented history
+  // <div class="history text-center">
+  //         <h2>History</h2>
+  //         <div class="history-list text-left">
+  //           ${
+  //             this.getHistorysLiteral()
+  //           }
+  //         </div>
+  //       </div>
 
   createPage(){
     $(".container-fluid").append(this.getPageLiteral());
@@ -500,7 +601,7 @@ const getData = async () => {
   // TODO: replace with actual data
 
   // dummy input - read json
-  const data = await fetch("https://ritik-kansal.github.io/HotelFrontendBootstrap/dummy_input.json")
+  const data = await fetch("./dummy_input.json")
     .then((response) => response.json())
     .then((data) => {
       return data;

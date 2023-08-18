@@ -1,6 +1,7 @@
 *,body{
   margin: 0;
   padding: 0;
+  font-size: 14px;
 }
 
 .location{
@@ -18,12 +19,11 @@
 }
 
 .container-fluid .drop-targets {
-  max-width: 720px;
   margin-left: auto;
   margin-right: auto;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  align-items: stretch;
+  gap: 40px;
 }
 
 .hide {
@@ -31,79 +31,72 @@
 }
 
 .box_container {
-  width: 32%;
-  margin-bottom: 20px;
+  width: 100%;
+  margin-bottom: 10px;
 }
 
 .box_container.temp {
-  width: 250px;
-  margin-bottom: 20px;
   position: absolute;
-  top: 255px;
+  top: 0px;
+  bottom: 0px;
   left: 0px;
+  right: 0px;
+  
   overflow: auto;
-  bottom: 0;
 }
 
 .box {
-  border: 2px solid #ccc;
-  min-height: 150px;
   display: flex;
   flex-direction: column;
   gap: 10px;
-  align-items: center;
-  justify-content: center;
-  border-radius: 0 0 5px 5px;
-  padding: 20px 8px;
-  background-color: #eee;
+  padding: 10px 8px;
+  background-color: #E0EAF5;
+}
+
+.temp .box{
+  min-height: 100%;
 }
 
 .box.drag-over {
   border: 2px dotted red;
 }
 .box_name {
-  text-align: center;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: bold;
   color: #fff;
-  border-radius: 5px 5px 0 0;
   display: flex;
   justify-content: space-between;
-  padding: 5px 10px;
+  padding: 18px;
 }
 
 .item {
   background-color: #ccc;
-  border-radius: 10px;
   padding: 10px 5px;
   width: 100%;
 }
 .item .name {
-  font-size: 20px;
-  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
 }
 .item .properties {
   display: flex;
-  flex-wrap: wrap;
+  align-items: self-end;
   justify-content: space-between;
-  padding: 5px 10px;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
-.item .properties .property {
-  min-width: 50%;
-  margin-bottom: 5px;
-}
 
 .bg-danger {
-  background-color: #f14668 !important;
+  background-color: #E57D1D !important;
 }
 
 .bg-primary {
-  background-color: #00d1b2 !important;
+  background-color: #2C478B !important;
 }
 
 .bg-warning {
-  background-color: #ffe08a !important;
+  background-color: #2A6E5A !important;
 }
 .history {
   min-width: 260px;
@@ -131,4 +124,19 @@
   font-size: 12px;
   margin-top: 5px;
   color: #666;
+}
+
+.opacity-50{
+  opacity: 0.5;
+}
+
+.link-color{
+  color: #3071B8;
+}
+
+.border-link{
+  border-bottom: 1px solid #3071B8;
+}
+.pointer{
+  cursor: pointer;
 }

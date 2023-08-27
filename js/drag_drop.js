@@ -6,11 +6,11 @@ class Guest{
 
   constructor(payload,id){
     this.id = id;
-    this.name = payload["NAME"];
-    this.age = payload["AGE"];
-    this.gender = payload["GENDER"];
-    this.room_type = payload["ROOM_TYPE"];
-    this.room_text = payload["ROOM_TEXT"];
+    this.name = payload["name"];
+    this.age = payload["age"];
+    this.gender = payload["sex"];
+    this.room_type = payload["room_request"];
+    this.room_text = payload["room_text"];
     this.keys = ["age", "gender", "room_type", "room_text"];
     this.color = this.getColor(this.room_type);
 
@@ -104,7 +104,7 @@ class BoxContainer{
           Name for room <strong>${old_name}</strong> changed to <strong>${new_name}</strong>
         </div>
       `;
-    page.addHistoryByMessage(message, location_id);
+    // page.addHistoryByMessage(message, location_id);
   }
 
   static editName(e) {
@@ -149,9 +149,21 @@ class BoxContainer{
       return "Double";
     }
     if (capacity == "3") {
+      return "Twin";
+    }
+    if (capacity == "4") {
       return "Triple";
     }
   };
+
+  static getRoomTenantType = (guest) => {
+    if (guest.age < 18) {
+      return guest.gender == "F" ? 1 : 2;
+    } else {
+      return guest.gender == "F" ? 3 : 4;
+    }
+  };
+        
   
   static getRoomColor = (capacity) => {
     if (capacity == "1") {
@@ -215,7 +227,7 @@ class BoxContainer{
             `;
           
           let page = Page.currentPage;
-          page.addHistoryByMessage(message, src_box_container.location_id);
+          // page.addHistoryByMessage(message, src_box_container.location_id);
         }
         else{alert("Can not downgrade room type")}
       }
@@ -289,21 +301,21 @@ class BoxContainer{
   }
 }
 
-class History{
-  constructor(payload){
-    this.message = payload["message"];
-    this.createdAt = new Date(payload["creataAt"]).toLocaleString();
-  }
+// class History{
+//   constructor(payload){
+//     this.message = payload["message"];
+//     this.createdAt = new Date(payload["creataAt"]).toLocaleString();
+//   }
 
-  getHistoryLiteral(){
-    return `
-      <div class="history-block">
-        <div class="msg">${this.message}</div>
-        <div class="time">${this.createdAt}</div>
-      </div>
-    `;
-  }
-}
+//   getHistoryLiteral(){
+//     return `
+//       <div class="history-block">
+//         <div class="msg">${this.message}</div>
+//         <div class="time">${this.createdAt}</div>
+//       </div>
+//     `;
+//   }
+// }
 
 class Location{
 
@@ -454,7 +466,7 @@ class Location{
         </div>
       `;
 
-    page.addHistoryByMessage(message, this.id);
+    // page.addHistoryByMessage(message, this.id);
   }
 
   moveAllGuestsToTemp = () => {
@@ -477,7 +489,7 @@ class Location{
         </div>
       `;
 
-    page.addHistoryByMessage(message, this.id);
+    // page.addHistoryByMessage(message, this.id);
   };
   
   createNewBoxContainer = (capacity) => {
@@ -499,7 +511,7 @@ class Location{
         </div>
       `;
 
-    page.addHistoryByMessage(message, this.id);
+    // page.addHistoryByMessage(message, this.id);
   }
 
   updateLocation(){
@@ -521,28 +533,28 @@ class Page{
     });
 
     // TODO: there will be common history for all locations
-    this.history = payload[0]["history"].map((history,index) => {
-      return new History(history);
-    });
+    // this.history = payload[0]["history"].map((history,index) => {
+    //   return new History(history);
+    // });
 
     Page.currentPage = this;
   }
 
-  addHistoryByMessage(message, location_id){
-    let location = Location.getLocationById(location_id);
-    console.log(location, location_id);
-    let history_payload = {
-      message: `
-        ${message}
-        <div class="time">
-          Date Range: ${location.arrivalDate} to ${location.departureDate}
-        </div>
-      `,
-      createdAt: new Date().toLocaleString(),
-    };
-    this.addHistoryByPayload(history_payload);
-    this.updateHistory();
-  }
+  // addHistoryByMessage(message, location_id){
+  //   let location = Location.getLocationById(location_id);
+  //   console.log(location, location_id);
+  //   let history_payload = {
+  //     message: `
+  //       ${message}
+  //       <div class="time">
+  //         Date Range: ${location.arrivalDate} to ${location.departureDate}
+  //       </div>
+  //     `,
+  //     createdAt: new Date().toLocaleString(),
+  //   };
+  //   this.addHistoryByPayload(history_payload);
+  //   this.updateHistory();
+  // }
   
   getLocationsLiteral(){
     let location_list = this.locations.map(location => location.getLocationLiteral()).join("");
@@ -554,22 +566,22 @@ class Page{
     return history_list;
   }
 
-  addHistoryByPayload(payload){
-    let newHistory = new History(payload);
-    // add to top of history
-    this.history.unshift(newHistory);
-  }
+  // addHistoryByPayload(payload){
+  //   let newHistory = new History(payload);
+  //   // add to top of history
+  //   this.history.unshift(newHistory);
+  // }
 
-  updateHistory(){
-    let history_list = `
-      <div class="history-list text-left">
-        ${
-          this.getHistorysLiteral()
-        }
-      </div>
-    `;
-    $(".history-list").replaceWith(history_list);
-  }
+  // updateHistory(){
+  //   let history_list = `
+  //     <div class="history-list text-left">
+  //       ${
+  //         this.getHistorysLiteral()
+  //       }
+  //     </div>
+  //   `;
+  //   $(".history-list").replaceWith(history_list);
+  // }
 
   getPageLiteral(){
     let page_literal = `
@@ -601,7 +613,7 @@ const getData = async () => {
   // TODO: replace with actual data
 
   // dummy input - read json
-  const data = await fetch("./dummy_input.json")
+  const data = await fetch("./dummy_input_2.json")
     .then((response) => response.json())
     .then((data) => {
       return data;
@@ -773,7 +785,7 @@ const addGuestSubmit = async (e) => {
       </div>
     `;
 
-  page.addHistoryByMessage(message,box_container.location_id);
+  // page.addHistoryByMessage(message,box_container.location_id);
   
 
   // dismiss modal addGuestModal
@@ -809,10 +821,243 @@ const createElements = (data) => {
   page.createPage();
 };
 
+const sortDataWithRoomType = (pax_list) =>{
+  var sortedData = {};
+
+  for (var i = 1; i <= 4; i++) {
+    sortedData[i] = {
+      "Female Children": [],
+      "Male Children": [],
+      "Female Adults": [],
+      "Male Adults": [],
+    };
+  }
+
+  for (let i = 0; i < pax_list.length; ++i) {
+    let tenantType = "";
+
+    if (pax_list[i]["sex"] === "M") {
+      if (parseInt(pax_list[i]["age"]) >= 18) {
+        tenantType = "Male Adults";
+      } else {
+        tenantType = "Male Children";
+      }
+    } else {
+      if (parseInt(pax_list[i]["age"]) >= 18) {
+        tenantType = "Female Adults";
+      } else {
+        tenantType = "Female Children";
+      }
+    } 
+
+    let roomType = parseInt(pax_list[i]["room_request"]);
+
+    if (tenantType !== "") sortedData[roomType][tenantType].push(pax_list[i]);
+  }
+
+  return sortedData;
+}
+
+
+const processData = (data) => {
+  const capacityMap = { triples: 4, twins: 3, doubles: 2, singles: 1 };
+  var logicData = {};
+  let sortedData = sortDataWithRoomType(data["pax_list"]);
+  let occupantTypes = ["Female Children", "Male Children", "Female Adults", "Male Adults"];
+
+  
+  let pax_list = data["pax_list"];
+  let room_count = data["room_counts"];
+
+  let rooms = {};  
+  rooms[capacityMap['singles']] = { Rooms: [], available: room_count['singles'] };
+  rooms[capacityMap['doubles']] = { Rooms: [], available: room_count['doubles'] };
+  rooms[capacityMap['twins']] = { Rooms: [], available: room_count['twins'] };
+  rooms[capacityMap['triples']] = { Rooms: [], available: room_count['triples'] };
+
+  let Temporary = { guests: [] };
+
+  // at max 1 room per occupantType per capacity can be partially filled
+  let partiallyFilledRooms = {};
+  occupantTypes?.forEach((occupantType) => {
+    partiallyFilledRooms[occupantType] = {
+      4: null,
+      3: null,
+      2: null,
+      1: null,
+    };
+  });
+
+  // fill rooms
+  Object.entries(rooms)?.forEach(([roomSize, room]) => {
+    let occupantTypesIndex = 0;
+    while (room.available > 0 && occupantTypesIndex < occupantTypes.length) {
+      let currentRoom = [];
+      let tempIndex = null;
+      for (let j = 0; j < roomSize; j++) {
+        tempIndex = occupantTypesIndex;
+        if (sortedData[roomSize][occupantTypes[occupantTypesIndex]].length > 0) {
+          currentRoom.push(sortedData[roomSize][occupantTypes[occupantTypesIndex]].pop());
+        } else {
+          occupantTypesIndex++;
+          break;
+        }
+      }
+      if (currentRoom.length > 0) {
+        if (currentRoom.length < roomSize) {
+          // only 1 room of this size can be partially filled per occupantType
+          partiallyFilledRooms[occupantTypes[tempIndex]][roomSize] = currentRoom;
+        } else {
+          // if the room is completely filled, add it to the list of rooms
+          room.Rooms.push(currentRoom);
+        }
+        room.available--;
+      }
+    }
+  });
+
+  // fill partially filled rooms
+  let occupantTypesIndex = 0;
+  // Iterate over occupantTypes
+  while (occupantTypesIndex < occupantTypes.length) {
+    // iterate through room sizes
+    for (let i = 4; i > 0; i--) {
+      // j is the capacity of the partially filled room
+      let j = i - 1;
+      // if there are still occupants of this type, try to fill them in the partially filled rooms
+      // if there is a partially filled room with this occupantType and capacity less than to the current room size
+      while (sortedData[i][occupantTypes[occupantTypesIndex]].length > 0 && j > 0) {
+        if (partiallyFilledRooms[occupantTypes[occupantTypesIndex]][j]) {
+          let currentRoom = partiallyFilledRooms[occupantTypes[occupantTypesIndex]][j];
+          currentRoom.push(sortedData[i][occupantTypes[occupantTypesIndex]].pop());
+          if (currentRoom.length === j) {
+            rooms[j].Rooms.push(currentRoom);
+            partiallyFilledRooms[occupantTypes[occupantTypesIndex]][j] = null;
+          } else {
+            partiallyFilledRooms[occupantTypes[occupantTypesIndex]][j] = currentRoom;
+          }
+        } else {
+          j--;
+        }
+      }
+    }
+    occupantTypesIndex++;
+  }
+
+  // fill remaining rooms
+  occupantTypesIndex = 0;
+  // Iterate over occupantTypes
+  while (occupantTypesIndex < occupantTypes.length) {
+    // iterate through room sizes
+    for (let i = 4; i > 0; i--) {
+      let j = i - 1;
+      // if there are still occupants of this type and there are still rooms of size less then current room size, try to fill them
+      while (sortedData[i][occupantTypes[occupantTypesIndex]].length > 0 && j > 0) {
+        if (rooms[j].available > 0) {
+          let currentRoom = [];
+          for (let k = 0; k < j; k++) {
+            if (sortedData[i][occupantTypes[occupantTypesIndex]].length > 0) {
+              currentRoom.push(sortedData[i][occupantTypes[occupantTypesIndex]].pop());
+            } else {
+              break;
+            }
+          }
+          if (currentRoom.length > 0) {
+            rooms[j].Rooms.push(currentRoom);
+            rooms[j].available--;
+          }
+        } else {
+          j--;
+        }
+      }
+    }
+    occupantTypesIndex++;
+  }
+
+  // add remaining occupants to temporary rooms
+  occupantTypesIndex = 0;
+  // Iterate over occupantTypes
+  while (occupantTypesIndex < occupantTypes.length) {
+    // iterate through room sizes
+    for (let i = 4; i > 0; i--) {
+      // if there are still occupants of this type and there are still rooms of size less then current room size, try to fill them
+      while (sortedData[i][occupantTypes[occupantTypesIndex]].length > 0) {
+        Temporary.guests.push(sortedData[i][occupantTypes[occupantTypesIndex]].pop());
+      }
+    }
+    occupantTypesIndex++;
+  }
+
+  // push all rooms in partiallyFilledRooms to rooms
+  Object.keys(partiallyFilledRooms)?.forEach((occupantType) => {
+    Object.keys(partiallyFilledRooms[occupantType])?.forEach((roomSize) => {
+      if (partiallyFilledRooms[occupantType][roomSize]) {
+        rooms[roomSize].Rooms.push(partiallyFilledRooms[occupantType][roomSize]);
+      }
+    });
+  });
+
+  // sum all the rooms and push to logicData
+  Object.keys(rooms)?.forEach((key) => {
+    logicData[parseInt(key)] = rooms[key].Rooms;
+  });
+
+  logicData["Temporary"] = Temporary.guests;
+
+  console.log("logicData: ", logicData);
+  
+  let arr = [];
+  let count = 0;
+  Object.keys(logicData)?.forEach((key) => {
+    if( key != "Temporary"){
+      for (let i = 0; i < logicData[key].length; ++i) {
+        
+        arr.push({
+          state: count,
+          guests: logicData[key][i],
+          title: `Room ${count + 1}-` + BoxContainer.getRoomType(key),
+          color: BoxContainer.getRoomColor(key),
+          accept: BoxContainer.getRoomTenantType(new Guest(logicData[key][i])),
+          capacity: key,
+        });
+        count++;
+      }
+    }
+  });
+
+  if("Temporary" in logicData){
+    arr.push({
+      state: count,
+      guests: logicData["Temporary"],
+      title: `Room Temporary`,
+      color: "secondary",
+      accept: "all",
+      capacity: 10000,
+    });
+  }
+
+  return arr;
+}
+
 // when document is ready
 $(document).ready(async () => {
   let data = await getData();
-  await createElements(data);
+  let processed_data = processData(data);
+  data["boards"] = processed_data;
+  let final_data = {
+    responseData: {
+      isLocked: false,
+      createdDate: new Date().toLocaleString(),
+      roomData: [data],
+      tripId: "123456",
+      updatedDate: new Date().toLocaleString(),
+      version: "1.0",
+    }
+  };
+
+  console.log("final_data: ", final_data);
+
+  await createElements(final_data);
   attachModalFunctions();
   attachMainButtons();
 });

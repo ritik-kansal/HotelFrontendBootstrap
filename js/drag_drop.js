@@ -43,7 +43,7 @@ class Guest{
             <div class="ml-4" key="gender" value="${this['gender']}">Gender: ${this['gender']}</div>
           </div>
           <div class="bg-${this.room_type} px-4 py-1 rounded-pill">
-            <div class="text-white" key="room_type" value="${this['room_type']}">${this.room_type[0].toUpperCase()+this.room_type.slice(1)}</div>
+            <div class="text-white" key="room_type" value="${this['room_type']}">${this['room_type'][0].toUpperCase() + this['room_type'].slice(1)}</div>
           </div>
         </div>
       </div>
@@ -701,9 +701,10 @@ const addGuestForm = (box_container_id) => {
         <div class="form-group">
           <label for="guestRoomTypeInput">Room Type</label>
           <select required class="custom-select" id="guestRoomTypeInput" >
-            <option value="1">Single</option>
-            <option value="2">Double</option>
-            <option value="3">Triple</option>
+            <option value="single">Single</option>
+            <option value="twin">Twin</option>
+            <option value="double">Double</option>
+            <option value="triple">Triple</option>
           </select>
         </div>
         <div class="form-group">
@@ -725,12 +726,14 @@ const addGuestSubmit = async (e) => {
 
   // create payload
   let guest_payload = {
-    "NAME" : $("#guestNameInput").val(),
-    "AGE" : $("#guestAgeInput").val(),
-    "ROOM_TYPE" : $("#guestRoomTypeInput").val(),
-    "ROOM_TEXT" : $("#guestRoomTextInput").val(),
-    "GENDER" : $("#guestGenderInput").val()
+    "name" : $("#guestNameInput").val(),
+    "age" : $("#guestAgeInput").val(),
+    "room_selection" : $("#guestRoomTypeInput").val(),
+    "room_text" : $("#guestRoomTextInput").val(),
+    "sex" : $("#guestGenderInput").val()
   };
+
+  console.log("guest_payload", guest_payload);
   
   // add guest to board
   let box_container_id = $("#addGuestSelect").val();

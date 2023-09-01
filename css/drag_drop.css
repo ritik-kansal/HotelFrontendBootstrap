@@ -87,17 +87,22 @@
 }
 
 
-.bg-danger {
+.bg-single {
   background-color: #E57D1D !important;
 }
 
-.bg-primary {
+.bg-twin {
   background-color: #2C478B !important;
 }
 
-.bg-warning {
+.bg-double {
+  background-color: #884DC2 !important;
+}
+
+.bg-triple {
   background-color: #2A6E5A !important;
 }
+
 .history {
   min-width: 260px;
   width: 260px;

@@ -9,10 +9,9 @@ class Guest{
     this.name = payload["name"];
     this.age = payload["age"];
     this.gender = payload["sex"];
-    this.room_type = payload["room_request"];
+    this.room_type = payload["room_selection"];
     this.room_text = payload["room_text"];
     this.keys = ["age", "gender", "room_type", "room_text"];
-    this.color = this.getColor(this.room_type);
 
     Guest.guests.set(this.id,this);
   }
@@ -34,19 +33,6 @@ class Guest{
     e.target.classList.remove("hide");
   }
 
-
-  getColor = (room_type) => {
-    if (room_type == "1") {
-      return "danger";
-    }
-    if (room_type == "2") {
-      return "primary";
-    }
-    if (room_type == "3") {
-      return "warning";
-    }
-  };
-
   getGuestLiteral(){
     return `
       <div class="item bg-white rounded-sm" id="${this.id}" draggable="true" ondragstart="Guest.dragStart(event)" ondragend="Guest.dragEnd(event)">
@@ -56,8 +42,8 @@ class Guest{
             <div class="" key="age" value="${this['age']}">Age: ${this['age']}</div>
             <div class="ml-4" key="gender" value="${this['gender']}">Gender: ${this['gender']}</div>
           </div>
-          <div class="bg-${this.getColor(this['room_type'])} px-4 py-1 rounded-pill">
-            <div class="text-white" key="room_type" value="${this['room_type']}">${BoxContainer.getRoomType(this['room_type'])}</div>
+          <div class="bg-${this.room_type} px-4 py-1 rounded-pill">
+            <div class="text-white" key="room_type" value="${this['room_type']}">${this.room_type[0].toUpperCase()+this.room_type.slice(1)}</div>
           </div>
         </div>
       </div>
@@ -73,7 +59,8 @@ class BoxContainer{
     
     this.id = payload['title'] != "Room Temporary" ? `box_container_id-${location_id}_${id}` : `box_container_id-${location_id}_temp_id`;
     this.name = payload["title"];
-    this.capacity = payload["capacity"];
+    this.room_type = payload["room_type"];
+    this.room_size = payload["room_size"];
     this.color = payload["color"];
     this.location_id = location_id;
     this.areGuestsHidden = false;
@@ -141,39 +128,11 @@ class BoxContainer{
     box_container.updateBoxContainer();
   }
 
-  static getRoomType = (capacity) => {
-    if (capacity == "1") {
-      return "Single";
-    }
-    if (capacity == "2") {
-      return "Double";
-    }
-    if (capacity == "3") {
-      return "Twin";
-    }
-    if (capacity == "4") {
-      return "Triple";
-    }
-  };
-
   static getRoomTenantType = (guest) => {
     if (guest.age < 18) {
       return guest.gender == "F" ? 1 : 2;
     } else {
       return guest.gender == "F" ? 3 : 4;
-    }
-  };
-        
-  
-  static getRoomColor = (capacity) => {
-    if (capacity == "1") {
-      return "danger";
-    }
-    if (capacity == "2") {
-      return "primary";
-    }
-    if (capacity == "3") {
-      return "warning";
     }
   };
 
@@ -203,10 +162,10 @@ class BoxContainer{
     const guest_id = e.dataTransfer.getData("text/plain");
     const guest = Guest.getGuestById(guest_id);
 
-    const des_capacity = des_box_container.capacity;
+    const des_capacity = des_box_container.room_size;
     const des_guests_length = des_box_container.guests.length;
     
-    // if capacity is not reached
+    // if room_size is not reached
     if (des_guests_length < des_capacity) {
       let room_type = guest.room_type;
       let guestName = guest.name;
@@ -291,7 +250,7 @@ class BoxContainer{
             `<div></div>`
           :
           `
-            <div class="box" capacity="${this.capacity}" ondrop="BoxContainer.drop(event)" ondragover="BoxContainer.dragOver(event)" ondragenter="BoxContainer.dragEnter(event)" ondragleave="BoxContainer.dragLeave(event)">
+            <div class="box" room_size="${this.room_size}" ondrop="BoxContainer.drop(event)" ondragover="BoxContainer.dragOver(event)" ondragenter="BoxContainer.dragEnter(event)" ondragleave="BoxContainer.dragLeave(event)">
               ${this.guests.map(guest => guest.getGuestLiteral()).join("")}
             </div>
           `
@@ -330,18 +289,22 @@ class Location{
     this.tripCode = payload["tripCode"];
     this.totalPaxCount = 0;
     this.singleRoomCount = 0;
+    this.twinRoomCount = 0;
     this.doubleRoomCount = 0;
     this.tripleRoomCount = 0;
     this.boxContainers = payload["boards"].map((room,index) => {
       this.totalPaxCount += room["guests"].length;
       
-      if(room["capacity"] == 1){
+      if(room["color"] == 'single'){
         this.singleRoomCount += 1;
       }
-      else if(room["capacity"] == 2){
+      else if(room["color"] == 'twin'){
+        this.twinRoomCount += 1;
+      }
+      else if(room["color"] == 'double'){
         this.doubleRoomCount += 1;
       }
-      else if(room["capacity"] == 3){
+      else if(room["color"] == 'triple'){
         this.tripleRoomCount += 1;
       }
 
@@ -429,9 +392,10 @@ class Location{
             <div class="">ROOM COUNT: <span class="font-weight-bold">${this.boxContainers.length}</span></div>
             <div class="">TOTAL PAX COUNT: <span class="font-weight-bold">${this.totalPaxCount}</span></div>
             <div class="d-flex">
-              <div class="bg-danger text-white rounded-pill px-3 py-2 mr-1">SINGLE: ${this.singleRoomCount}</div>
-              <div class="bg-primary text-white rounded-pill px-3 py-2 mr-1">DOUBLE: ${this.doubleRoomCount}</div>
-              <div class="bg-warning text-white rounded-pill px-3 py-2 mr-1">TRIPLE: ${this.tripleRoomCount}</div>
+              <div class="bg-single text-white rounded-pill px-3 py-2 mr-1">SINGLE: ${this.singleRoomCount}</div>
+              <div class="bg-twin text-white rounded-pill px-3 py-2 mr-1">Twin: ${this.twinRoomCount}</div>
+              <div class="bg-double text-white rounded-pill px-3 py-2 mr-1">DOUBLE: ${this.doubleRoomCount}</div>
+              <div class="bg-triple text-white rounded-pill px-3 py-2 mr-1">TRIPLE: ${this.tripleRoomCount}</div>
             </div>
           </div>
 
@@ -492,13 +456,13 @@ class Location{
     // page.addHistoryByMessage(message, this.id);
   };
   
-  createNewBoxContainer = (capacity) => {
+  createNewBoxContainer = (room_type, room_size) => {
     let box_container_count = this.boxContainers.length;
     this.addBoxContainer(
       {
-        title: `Room ${box_container_count}-${BoxContainer.getRoomType(capacity)}`,
-        color: BoxContainer.getRoomColor(capacity),
-        capacity: capacity,
+        title: `Room ${box_container_count}-${room_type[0].toUpperCase() + room_type.slice(1)}`,
+        color: room_type,
+        capacity: room_size,
         guests: [],
       }
     );
@@ -507,7 +471,7 @@ class Location{
     
     let message=`
         <div>
-          New Room Created. <br />Room Name: <strong>Room ${box_container_count}-${BoxContainer.getRoomType(capacity)}</strong>
+          New Room Created. <br />Room Name: <strong>Room ${box_container_count}-${room_type[0].toUpperCase() + room_type.slice(1)}</strong>
         </div>
       `;
 
@@ -613,7 +577,7 @@ const getData = async () => {
   // TODO: replace with actual data
 
   // dummy input - read json
-  const data = await fetch("./dummy_input_2.json")
+  const data = await fetch("./dummy_input_3.json")
     .then((response) => response.json())
     .then((data) => {
       return data;
@@ -658,9 +622,10 @@ const attachMainButtons = () => {
 
 const attachModalFunctions = () => {
   $("#addRoom").click(() => {
-    let capacity = $("#addRoomSelect").val();
+    let room_type = $("#addRoomSelect").val();
     let location = Location.getLocationById(global_location_id);
-    location.createNewBoxContainer(capacity);
+    let roomSizeMap = { triple: 4, twin: 3, double: 2, single: 1 };
+    location.createNewBoxContainer(room_type, roomSizeMap[room_type]);
     location.updateLocation();
   });
 
@@ -704,9 +669,9 @@ const addGuestForm = (box_container_id) => {
   let box_container = BoxContainer.getBoxContainerById(box_container_id);
 
   let guests_length = box_container.guests.length;
-  let capacity = box_container.capacity;
+  let room_size = box_container.room_size;
   
-  if (guests_length >= capacity) {
+  if (guests_length >= room_size) {
     // if yes, show text
     $("#deleteWarningAddGuest").text("Room is full. Please select another room.");
     $("#addGuestModalBody").empty();
@@ -821,11 +786,11 @@ const createElements = (data) => {
   page.createPage();
 };
 
-const sortDataWithRoomType = (pax_list) =>{
+const sortDataWithRoomType = (pax_list,roomSizeMap) =>{
   var sortedData = {};
 
-  for (var i = 1; i <= 4; i++) {
-    sortedData[i] = {
+  for (var room_type in roomSizeMap) {
+    sortedData[room_type] = {
       "Female Children": [],
       "Male Children": [],
       "Female Adults": [],
@@ -850,7 +815,7 @@ const sortDataWithRoomType = (pax_list) =>{
       }
     } 
 
-    let roomType = parseInt(pax_list[i]["room_request"]);
+    let roomType = pax_list[i]["room_selection"];
 
     if (tenantType !== "") sortedData[roomType][tenantType].push(pax_list[i]);
   }
@@ -860,146 +825,69 @@ const sortDataWithRoomType = (pax_list) =>{
 
 
 const processData = (data) => {
-  const capacityMap = { triples: 4, twins: 3, doubles: 2, singles: 1 };
+  const roomSizeMap = { triple: 3, twin: 2, double: 2, single: 1 };
   var logicData = {};
-  let sortedData = sortDataWithRoomType(data["pax_list"]);
+  let sortedData =  sortDataWithRoomType(data["pax_list"],roomSizeMap);
+  console.log("sortedData", sortedData);
+  
   let occupantTypes = ["Female Children", "Male Children", "Female Adults", "Male Adults"];
 
   
-  let pax_list = data["pax_list"];
   let room_count = data["room_counts"];
 
   let rooms = {};  
-  rooms[capacityMap['singles']] = { Rooms: [], available: room_count['singles'] };
-  rooms[capacityMap['doubles']] = { Rooms: [], available: room_count['doubles'] };
-  rooms[capacityMap['twins']] = { Rooms: [], available: room_count['twins'] };
-  rooms[capacityMap['triples']] = { Rooms: [], available: room_count['triples'] };
+  rooms['single'] = { Rooms: [], available: room_count['singles'] };
+  rooms['double'] = { Rooms: [], available: room_count['doubles'] };
+  rooms['twin'] = { Rooms: [], available: room_count['twins'] };
+  rooms['triple'] = { Rooms: [], available: room_count['triples'] };
 
   let Temporary = { guests: [] };
 
-  // at max 1 room per occupantType per capacity can be partially filled
-  let partiallyFilledRooms = {};
-  occupantTypes?.forEach((occupantType) => {
-    partiallyFilledRooms[occupantType] = {
-      4: null,
-      3: null,
-      2: null,
-      1: null,
-    };
-  });
 
   // fill rooms
-  Object.entries(rooms)?.forEach(([roomSize, room]) => {
+  Object.entries(rooms)?.forEach(([room_type, room]) => {
     let occupantTypesIndex = 0;
     while (room.available > 0 && occupantTypesIndex < occupantTypes.length) {
       let currentRoom = [];
       let tempIndex = null;
-      for (let j = 0; j < roomSize; j++) {
+      for (let j = 0; j < roomSizeMap[room_type]; j++) {
         tempIndex = occupantTypesIndex;
-        if (sortedData[roomSize][occupantTypes[occupantTypesIndex]].length > 0) {
-          currentRoom.push(sortedData[roomSize][occupantTypes[occupantTypesIndex]].pop());
+        if (sortedData[room_type][occupantTypes[occupantTypesIndex]].length > 0) {
+          currentRoom.push(sortedData[room_type][occupantTypes[occupantTypesIndex]].pop());
         } else {
           occupantTypesIndex++;
           break;
         }
       }
       if (currentRoom.length > 0) {
-        if (currentRoom.length < roomSize) {
-          // only 1 room of this size can be partially filled per occupantType
-          partiallyFilledRooms[occupantTypes[tempIndex]][roomSize] = currentRoom;
-        } else {
-          // if the room is completely filled, add it to the list of rooms
-          room.Rooms.push(currentRoom);
-        }
+        room.Rooms.push(currentRoom);
         room.available--;
       }
     }
   });
 
-  // fill partially filled rooms
-  let occupantTypesIndex = 0;
-  // Iterate over occupantTypes
-  while (occupantTypesIndex < occupantTypes.length) {
-    // iterate through room sizes
-    for (let i = 4; i > 0; i--) {
-      // j is the capacity of the partially filled room
-      let j = i - 1;
-      // if there are still occupants of this type, try to fill them in the partially filled rooms
-      // if there is a partially filled room with this occupantType and capacity less than to the current room size
-      while (sortedData[i][occupantTypes[occupantTypesIndex]].length > 0 && j > 0) {
-        if (partiallyFilledRooms[occupantTypes[occupantTypesIndex]][j]) {
-          let currentRoom = partiallyFilledRooms[occupantTypes[occupantTypesIndex]][j];
-          currentRoom.push(sortedData[i][occupantTypes[occupantTypesIndex]].pop());
-          if (currentRoom.length === j) {
-            rooms[j].Rooms.push(currentRoom);
-            partiallyFilledRooms[occupantTypes[occupantTypesIndex]][j] = null;
-          } else {
-            partiallyFilledRooms[occupantTypes[occupantTypesIndex]][j] = currentRoom;
-          }
-        } else {
-          j--;
-        }
-      }
-    }
-    occupantTypesIndex++;
-  }
 
-  // fill remaining rooms
-  occupantTypesIndex = 0;
-  // Iterate over occupantTypes
-  while (occupantTypesIndex < occupantTypes.length) {
-    // iterate through room sizes
-    for (let i = 4; i > 0; i--) {
-      let j = i - 1;
-      // if there are still occupants of this type and there are still rooms of size less then current room size, try to fill them
-      while (sortedData[i][occupantTypes[occupantTypesIndex]].length > 0 && j > 0) {
-        if (rooms[j].available > 0) {
-          let currentRoom = [];
-          for (let k = 0; k < j; k++) {
-            if (sortedData[i][occupantTypes[occupantTypesIndex]].length > 0) {
-              currentRoom.push(sortedData[i][occupantTypes[occupantTypesIndex]].pop());
-            } else {
-              break;
-            }
-          }
-          if (currentRoom.length > 0) {
-            rooms[j].Rooms.push(currentRoom);
-            rooms[j].available--;
-          }
-        } else {
-          j--;
-        }
-      }
-    }
-    occupantTypesIndex++;
-  }
+  
 
   // add remaining occupants to temporary rooms
   occupantTypesIndex = 0;
   // Iterate over occupantTypes
   while (occupantTypesIndex < occupantTypes.length) {
     // iterate through room sizes
-    for (let i = 4; i > 0; i--) {
+    for (var room_type in roomSizeMap) {
       // if there are still occupants of this type and there are still rooms of size less then current room size, try to fill them
-      while (sortedData[i][occupantTypes[occupantTypesIndex]].length > 0) {
-        Temporary.guests.push(sortedData[i][occupantTypes[occupantTypesIndex]].pop());
+      while (sortedData[room_type][occupantTypes[occupantTypesIndex]].length > 0) {
+        Temporary.guests.push(sortedData[room_type][occupantTypes[occupantTypesIndex]].pop());
       }
     }
     occupantTypesIndex++;
   }
 
-  // push all rooms in partiallyFilledRooms to rooms
-  Object.keys(partiallyFilledRooms)?.forEach((occupantType) => {
-    Object.keys(partiallyFilledRooms[occupantType])?.forEach((roomSize) => {
-      if (partiallyFilledRooms[occupantType][roomSize]) {
-        rooms[roomSize].Rooms.push(partiallyFilledRooms[occupantType][roomSize]);
-      }
-    });
-  });
+  console.log(rooms);
 
   // sum all the rooms and push to logicData
   Object.keys(rooms)?.forEach((key) => {
-    logicData[parseInt(key)] = rooms[key].Rooms;
+    logicData[key] = rooms[key].Rooms;
   });
 
   logicData["Temporary"] = Temporary.guests;
@@ -1015,10 +903,10 @@ const processData = (data) => {
         arr.push({
           state: count,
           guests: logicData[key][i],
-          title: `Room ${count + 1}-` + BoxContainer.getRoomType(key),
-          color: BoxContainer.getRoomColor(key),
+          title: `Room ${count + 1}-${key[0].toUpperCase() + key.slice(1)}`,
+          color: key,
           accept: BoxContainer.getRoomTenantType(new Guest(logicData[key][i])),
-          capacity: key,
+          room_size: roomSizeMap[key],
         });
         count++;
       }
@@ -1032,7 +920,7 @@ const processData = (data) => {
       title: `Room Temporary`,
       color: "secondary",
       accept: "all",
-      capacity: 10000,
+      room_size: 10000,
     });
   }
 
@@ -1042,6 +930,7 @@ const processData = (data) => {
 // when document is ready
 $(document).ready(async () => {
   let data = await getData();
+
   let processed_data = processData(data);
   data["boards"] = processed_data;
   let final_data = {
